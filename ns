@@ -1,0 +1,26 @@
+
+[1mFrom:[0m /home/asiantech-pm7/cosmejapanTPT/cosmejapan/app/controllers/carts_controller.rb @ line 13 CartsController#create:
+
+     [1;34m8[0m: [32mdef[0m [1;34mcreate[0m
+     [1;34m9[0m:   [1;34m# binding.pry[0m
+    [1;34m10[0m: 	[32mif[0m session[[33m:cart[0m].present?
+    [1;34m11[0m:     old_cart = session[[33m:cart[0m]
+    [1;34m12[0m:     binding.pry
+ => [1;34m13[0m:     old_cart.map { |oc| 
+    [1;34m14[0m:       [32mif[0m oc[[31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m] == params[[31m[1;31m"[0m[31mid[1;31m"[0m[31m[0m]
+    [1;34m15[0m:         binding.pry
+    [1;34m16[0m:         oc[[31m[1;31m"[0m[31mqty[1;31m"[0m[31m[0m] += [1;34m1[0m
+    [1;34m17[0m:         [1;34m# session[:cart] = old_cart[0m
+    [1;34m18[0m:       [32melse[0m
+    [1;34m19[0m:         @cart = [1;34;4mCart[0m.new(params[[33m:id[0m], params[[33m:name[0m], params[[33m:image_id[0m], params[[33m:image[0m], params[[33m:qty[0m], params[[33m:price[0m], params[[33m:sale[0m])
+    [1;34m20[0m:         session[[33m:cart[0m].push(@cart)
+    [1;34m21[0m:       [32mend[0m 
+    [1;34m22[0m:     }
+    [1;34m23[0m: 
+    [1;34m24[0m: 	[32melse[0m
+    [1;34m25[0m: 		@cart = [1;34;4mCart[0m.new(params[[33m:id[0m], params[[33m:name[0m], params[[33m:image_id[0m], params[[33m:image[0m], params[[33m:qty[0m], params[[33m:price[0m], params[[33m:sale[0m])
+    [1;34m26[0m: 		session[[33m:cart[0m] = [@cart]
+    [1;34m27[0m: 	[32mend[0m
+    [1;34m28[0m: 	redirect_to products_path
+    [1;34m29[0m: [32mend[0m
+

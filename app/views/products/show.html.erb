@@ -1,0 +1,231 @@
+  <!-- row -->
+  <div class="row">
+    <div class="col-md-12 box-block"> 
+      <!--  box content -->
+      <div class="box-content"> 
+        <!-- single product -->
+        <div class="single-product"> 
+          <!-- Images -->
+          <div class="images col-md-3 col-sm-12 col-xs-12">
+            <!-- Product -->
+                    <div class="product-block">
+                      <div class="image">
+                        <% if @product.sale != 0 %>
+                         <div class="product-label product-sale"><span>SALE</span></div>
+                        <% elsif @product.new <= 10 %>
+                         <div class="product-label product-new"><span>NEW</span></div>
+                        <%end %>
+                        <%= link_to "<img alt='product info' src='/uploads/product_image/image/#{@product.image_id}/#{@product.image}' title='product title'>".html_safe, '' %></div>
+                        <div class="product-meta">
+                          <div class="name"><%= link_to "#{@product.name}", '' %></div>
+                          <div class="big-price"> <% if @product.sale != 0 %>
+                              <span class="price-old"><span class="sym">$</span><%=@product.price %></span><span class="price-new"><span class="sym">$</span><%= @product.price-(@product.sale*@product.price/100) %>
+                            <%else%>
+                              <span class="price-new"><span class="sym">$</span><%=@product.price %>
+                          <%end%>
+                        </div>
+                          <div class="big-btns"><%= link_to 'View', '', class:'btn btn-default btn-view pull-left' %><%= link_to 'Add to Cart','', class:'btn btn-default btn-addtocart pull-right' %></div>
+                          <div class="small-price"> 
+                            <% if @product.sale != 0 %>
+                              <span class="price-old"><span class="sym">$</span><%=@product.price %></span>
+                              <span class="price-new"><span class="sym">$</span><%= @product.price-(@product.sale*@product.price/100) %></span>
+                            <%else%>
+                              <span class="price-new"><span class="sym">$</span><%=@product.price %>
+                          <%end%> 
+                        </div>
+                          <div class="rating">
+                            <% 
+                            for i in 1..5 do
+                              if @product.rating.to_i >= i
+                            %> 
+                              <i class="fa fa-star"></i> 
+                            <% else%>
+                              <i class="fa fa-star-o"></i> 
+                            <%
+                              end
+                            end
+                            %>
+                          </div>
+                          <div class="small-btns">
+                            <%= link_to "<i class='fa fa-eye fa-fw'></i> ".html_safe, '',class:"btn btn-default btn-compare pull-left", title: "Show Detail" %>
+                            <%= link_to "<i class='fa fa-shopping-cart fa-fw'></i>".html_safe, '',class:"btn btn-default btn-addtocart pull-left", title: "Add to Cart" %>
+                          </div>
+                        </div>
+                        <div class="meta-back"></div>
+                      </div>
+                    </div>
+                    <!-- end: Product -->
+          
+          <!-- end: Images --> 
+          
+          <!-- product details -->
+          
+          <div class="product-details col-md-9 col-sm-12 col-xs-12"> 
+            
+            <!-- Title and rating info -->
+            <div class="title">
+              <h1><%= @product.name %></h1>
+               <div class="rating">
+                <% 
+                 for i in 1..5 do
+                  if @product.rating.to_i >= i
+                %> 
+                    <i class="fa fa-star"></i> 
+                  <% else%>
+                    <i class="fa fa-star-o"></i> 
+                <%
+                  end
+                end
+                %>
+              </div>
+            </div>
+            <!-- end: Title and rating info -->
+            
+            <div class="row"> 
+              <!-- Availability, Product Code, Brand and short info -->
+              <div class="short-info-wr col-md-12 col-sm-12 col-xs-12">
+                <div class="short-info">
+                  <div class="product-attr-text"><b>Product serial: </b><span class="available"><%= @product.serial %></span></div>
+                  <div class="product-attr-text"><b>Height: </b><span><%= @product.height %></span></div>
+                  <div class="product-attr-text"><b>Brand: </b><span><%= @product.brand_name %></span></div>
+                  <div class="product-attr-text"><b>Category: </b><span><%= @product.category_name %></span></div>
+                </div>
+              </div>
+              <!-- end: Availability, Product Code, Brand and short info --> 
+              
+            </div>
+            <%= form_tag  carts_path do %>
+            <div class="row">
+              <div class="short-info-opt-wr col-md-4 col-sm-4 col-xs-12">
+                <div class="short-info-opt">
+                  <div class="att-row">
+                    <div class="qty-wr">
+                      <div class="qty-text hidden-xs"><b>Qty: </b></div>
+                      <div class="quantity-inp">
+                        <%= number_field_tag :qty, params[:qty], class:"quantity-input", min:"1", value: 1, min: 1 %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="price-wr col-md-4 col-sm-4 col-xs-12">
+                <% if @product.sale != 0 %>
+                <div class="big-price"> <span class="price-old"><span class="sym">$</span><%=@product.price %></span> <span class="price-new"><span class="sym">$</span><%= @product.price-(@product.sale*@product.price/100) %></span> </div>
+                <% else%>
+                   <div class="big-price"> <span class="price-new"><span class="sym">$</span><%=@product.price %></span></div>
+                <% end %>
+              
+            </div>
+              <div class="product-btns-wr col-md-4 col-sm-4 col-xs-12">
+                <div class="product-btns">
+                  <div class="product-big-btns">
+                    <%= hidden_field_tag :image, @product.image  %>
+                    <%= hidden_field_tag :name, @product.name  %>
+                    <%= hidden_field_tag :price, @product.price  %>
+                    <%= hidden_field_tag :id, @product.id  %>                    
+                    <%= submit_tag "Add to Cart", class:"btn btn-addtocart" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <%end%>
+          </div>
+          
+          <!-- end: product details --> 
+          
+        </div>
+        
+        <!-- end: single product --> 
+        
+      </div>
+      
+      <!-- end: box content --> 
+      
+    </div>
+  </div>
+  <!-- end:row --> 
+</div>
+<div class="row clearfix f-space30"></div>
+
+<!-- container -->
+<div class="container"> 
+  <!-- row -->
+  <div class="row"> 
+    <!-- tabs -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-column box-block product-details-tabs"> 
+      
+      <!-- Details Info/Reviews/Tags --> 
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs blog-tabs nav-justified">
+        <li class="active"><a href="index.htm#details-info" data-toggle="tab"><i class="fa  fa-th-list fa-fw"></i> Details Info</a></li>
+        <li><a href="index.htm#reviews" data-toggle="tab"><i class="fa fa-comments fa-fw"></i> Ratings and Comments  </a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active " id="details-info">
+          <b>Welcome to CosmeJapan!</b>
+          <p>We are pleased to introduce the best products for you, come to us is to make beautiful paradise, perhaps you want beauty that can not be trusted on the product quality wise, we banj will magically with the products from the country of origin is known for quality cosmetics</p>
+          <div class="table-responsive">
+            <h1> <%= @product.name %></h1>
+            <p> <%= @product.created_at %></p>
+            <p> <%= @product.detail %></p>
+          </div>
+        </div>
+        <div class="tab-pane" id="reviews">
+          <div class="heading"> <span><strong><%= @product.name %></strong></span><br>
+            <div class="rating">
+                <% 
+                 for i in 1..5 do
+                  if @product.rating.to_i >= i
+                %> 
+                    <i class="fa fa-star"></i> 
+                  <% else%>
+                    <i class="fa fa-star-o"></i> 
+                <%
+                  end
+                end
+                %>
+              </div>
+          </div>
+          
+          <div class="write-reivew" id="#write-review">
+            <% if session[:id] != nil %>
+            <p style="color: red"><%= notice %></p>
+            <h3>Ratings</h3>
+            <div class="fr-border"></div>
+            <!-- Form -->
+            <%= form_tag ratings_path, method: :post do %>
+            <%= hidden_field_tag :product_id, @product.id  %>
+            <%= hidden_field_tag :user_id, session[:id]  %>
+              <div class="row">
+                <div class="col-md-4 col-xs-12"> <a name="wr"> </a>
+                  <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label for="star5" title="Rocks!" class="fa fa-star">5 stars</label>
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" title="Pretty good" class="fa fa-star">4 stars</label>
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" title="Cool" class="fa fa-star">3 stars</label>
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" title="Kinda bad" class="fa fa-star">2 stars</label>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" title="Oops!" class="fa fa-star">1 star</label>
+                  </fieldset>
+              </div>
+              <button class="btn normal color1 pull-right">Submit</button>
+            <% end%>  
+            <%end%>
+            <!-- end: Form --> 
+          </div>
+          <div class="review">
+            <h3>Comments</h3>
+            <div class="fb-comments hidden-md hidden-xs" data-href="http://dev.cosmejapan.vn/<%= @product.id%>" data-width="1080" data-numposts="5" data-colorscheme="light"></div>
+          </div>
+          
+        </div>
+        
+    <!-- end: tabs --> 
+    
+  </div>
+<div class="row clearfix f-space30"></div>
+  <!-- row --> 

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  serial: MyString
+  height: 1
+  detail: MyString
+  price: 1
+  sale_off: 1
+  quantity: 1
+  discount: 1
+  is_delete: false
+
+two:
+  name: MyString
+  serial: MyString
+  height: 1
+  detail: MyString
+  price: 1
+  sale_off: 1
+  quantity: 1
+  discount: 1
+  is_delete: false

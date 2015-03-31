@@ -1,0 +1,6 @@
+id,email,password,role,full_name,tel,birthday,address,gender,image,is_delete,created_at,updated_at
+1,tamphubkdn@gmail.com,12345678,NULL,Nguyen Tam Phu,905566840,1992-04-05,Hue,1,NULL,NULL,2015-03-20 15:19:48,2015-03-20 15:19:48
+2,tamphubkdn2@gmail.com,12345678,NULL,Nguyen Tam Phu,905566840,1992-04-05,Hue,1,NULL,NULL,2015-03-20 15:29:48,2015-03-20 15:29:48
+3,tamphubkdn3@gmail.com,12345678,NULL,Nguyen Tam Phu,905566840,1992-04-05,Hue,1,NULL,NULL,2015-03-20 15:10:48,2015-03-20 15:10:48
+4,tamphubkdn4@gmail.com,12345678,NULL,Nguyen Tam Phu,905566840,1992-04-05,Hue,1,NULL,NULL,2015-03-20 15:39:48,2015-03-20 15:39:48
+5,tamphubkdn5@gmail.com,12345678,NULL,Nguyen Tam Phu,905566840,1992-04-05,Hue,1,NULL,NULL,2015-03-20 15:11:48,2015-03-20 15:11:48

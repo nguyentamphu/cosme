@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row clearfix">
+      <div class="col-lg-3 col-xs-12">
+        <div class="logo"> <%= link_to "
+          <div class='logoimage'><i class='fa fa-shopping-cart fa-fw'></i></div>
+          <div class='logotext'><span><strong>CosmeJapan</strong></div>
+          <span class='slogan'>ONLINE STORE</span>".html_safe, products_path, title: "CosmeJapan" %>
+        </div>
+      </div>
+      <!-- end: logo -->
+      <div class="visible-xs f-space20"></div>
+      <!-- search -->
+      <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right">
+        <div class="searchbar">
+          <%= form_tag products_path , method: :get, :id => "products_search" do %>
+            <div class="searchbox pull-right">
+              <%= text_field_tag :search, params[:search],class: "searchinput", placeholder:"Search...", type: "search" %>
+              <button class="fa fa-search fa-fw" type="submit"></button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <!-- end: search --> 
+    </div>
+  </div>

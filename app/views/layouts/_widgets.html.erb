@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs box-block sidebar">
+      <div class="box-heading"><span>LIKE US</span></div>
+      <div class="row clearfix f-space10"></div>
+      <!-- Get Updates Box -->
+      <div class="box-content">
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fasiantech.vn%3Ffref%3Dts&amp;width=262&amp;height=270&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:262px; height:277px;" allowTransparency="true"></iframe>
+      </div>
+      <div class="row clearfix f-space10"></div>
+
+    </div>
+    <!-- end: Sidebar -->
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="col-md-8 blog-block ">
+          <!-- Blog widget Box -->
+          <div class="box-content slide carousel-fade" id="blogslide">
+            <div class="carousel-inner">
+                <!-- Post -->
+                <%@articles.each do |article|%>
+                <div class="blog-entry item active">
+                  <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
+                  News Post</span> <%= image_tag (article.image), class: 'ani-image', height: '321' %>  </div>
+                  <div class="entry-row">
+                    <div class="date col-xs-12"><span><%= article.created_at.strftime("%d")%></span><span><%= article.created_at.strftime("%b - %Y")%></span></div>
+                    <div class="blog-text"> <span><%=article.description%></span>
+                      <span>  <a href="index.htm#a"> <i class="fa fa-comments fa-fw"></i>Read more</a> </span> </div>
+                    </div>
+                  </div>
+                <%end%>
+                  <!--END Post -->
+                </div>
+              </div>
+              <!-- end: Blog widget Box -->
+              <div class="f-space10"></div>
+            </div>
+            <div class="col-md-4 twitter-block hidden-sm hidden-xs ">
+                <div class="box-heading"><span>ADVS</span></div>
+                <div class="row clearfix f-space10"></div>
+              <%@advs.each do |adv|%>
+                <%= link_to "<img alt='product info' src='#{adv.image}'>".html_safe, adv.link %>
+              <%end%>
+<!--
+              <%@advs.each do |adv|%>
+               <%= image_tag (adv.image) %>
+              <%end%> -->
+            </div>
+            <!-- end: twitter widget box -->
+            <div class="f-space10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Widgets -->

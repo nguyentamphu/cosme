@@ -1,0 +1,67 @@
+  
+<%= form_for(@account) do |f| %>
+    <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @account.errors.full_messages.each do |message| %>
+        <li style="color:red"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+  <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :Email %><br>
+        <%= f.email_field :email,hide_label: true,  placeholder:"Enter your email", required: true %>
+        <div>
+            <% if notice%>
+            <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true" id="notice"><%= notice %></span>
+            <%end%>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :Password %><br>
+        <%= f.password_field :password, placeholder:"Enter your password", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Fullname %><br>
+        <%= f.text_field :full_name, placeholder:"Enter your fullname" , required: true%>
+      </div> 
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :Phone %><br>
+        <%= f.telephone_field :tel, placeholder:"Enter your phone number" , required: true %>
+      </div> 
+
+  <div class="form-group">
+        <%= f.label :Birthday %><br>
+        <%= f.date_select :birthday, :use_month_numbers=> true, :start_year=> 1950, :end_year=> Time.now.year, :date_separator=>'/' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Address %><br>
+        <%= f.text_field :address , placeholder:"Your address" , required: true%>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :Gender %><br>
+        <%= f.label :Male %>
+        <%= f.radio_button :gender,1 %>
+        <%= f.label :Female %>
+        <%= f.radio_button :gender, 0 %>
+      </div>
+      <% if @edit=='edit' %>
+        <div class="form-group">
+          <%= f.label :Avatar %>
+          <%= f.file_field :image, class: "form-control" %>
+        </div>
+
+  <% end -%>
+    <div class="pull-right"><%= f.submit :Submit, class:"btn btn-primary pull-left" %>
+    </div>
+
+  <% end %>
+
+</div>

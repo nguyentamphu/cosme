@@ -1,0 +1,115 @@
+<% if notice %>
+  <h1 id="notice" style="color: red"><%= notice %></h1>
+<%end%>
+<%= form_tag orders_path, id: "view_carts" do %>
+<% total = 0%>
+<% if session[:cart]!= nil %>
+
+<div class="row clearfix f-space10"></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-title">
+        <h2>Cart (<%= session[:cart].size() %> Items)</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row clearfix f-space10"></div>
+<!-- product -->
+<% session[:cart].each do |s| %>
+<div class="container" style="margin-bottom: 10px">
+  <div class="row">
+    <div class="product">
+      <div class="col-md-2 col-sm-3 hidden-xs p-wr">
+        <div class="product-attrb-wr">
+          <div class="product-attrb">
+            <div class="image"> <%= link_to "<img alt='product info' src='/uploads/product_image/image/#{s[1]["image_id"]}/#{s[1]["image"]}' title='product title'>".html_safe, product_path(s[1]["id"].to_i) %></a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-7 col-xs-9 p-wr">
+        <div class="product-attrb-wr">
+          <div class="product-meta">
+            <div class="name">
+              <h3><%= link_to s[1]["name"], product_path(s[1]["id"].to_i), id: "id_product_cart"%></h3>
+            </div>
+            <div class="price">
+            <% if s[1]["sale"].to_i !=0 %>
+                <span class="price-old">
+                  <span class="sym">$</span><%= s[1]["old_price"].to_i %></span> 
+                <span class="price-new"><span class="sym">$</span><%= s[1]["price"].to_i %>
+                </span> 
+                </span> 
+              <%else%>
+                 <span class="price-new"><span class="sym">$</span><%= s[1]["price"].to_i %>
+              <%end%>
+               </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-2 hidden-sm hidden-xs p-wr">
+        <div class="product-attrb-wr">
+          <div class="product-attrb">
+            <div class="qtyinput">
+              <div class="quantity-inp">
+              <%= number_field_tag  s[1]["id"].to_i, params[:qty], value: s[1]["qty"].to_i, min:1, class:"quantity-input" %>
+              <%= hidden_field_tag :id,  s[1]["id"] %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 hidden-sm hidden-xs p-wr">
+        <div class="product-attrb-wr">
+          <div class="product-attrb">
+            <div class="price"> 
+              <span class="t-price" id=<%= "amount_cart_"+s[1]["id"]+"" %>>
+                <span class="sym" >$</span>
+                <%= s[1]["amount"].to_i %>
+              </span>
+              <% total = (total +s[1]["amount"].to_i) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-3 p-wr">
+        <div class="product-attrb-wr">
+          <div class="product-attrb">
+            <div class="remove">
+            <%= link_to '<i class="fa fa-trash-o fa-fw color2"></i>'.html_safe, {:controller=> "carts", :action=> "destroy", :id=> s[1]["id"]}, method: :delete, data: { confirm: 'Are you sure?', title: "Remove" } %>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>
+<% end%>
+<!-- end: product -->
+<div class="row clearfix f-space30"></div>
+<div class="container">
+  <div class="row"> 
+    <!-- 	Total amount -->
+    
+    <div class="col-md-4 col-sm-4 col-xs-12 cart-box-wr">
+      <div class="box-content">
+        <div class="cart-box-tm">
+          <div class="tm3 bgcolor2">Total </div>
+          <%= hidden_field_tag :total, total %>
+          <div class="tm4 bgcolor2" id="total_cart"><span class="sym">$</span><%= total %></div>
+        </div>
+        <div class="clearfix f-space10"></div>
+       
+      </div>
+    </div>
+    <%= link_to "Update Carts", '', class: 'btn btn-addtocart color1 pull-right', id: "edit_qty_cart_user" %> 
+    <%= submit_tag "Payment", class: "btn btn-addtocart color1 pull-right"%>
+        <div class="clearfix f-space30"></div>
+  
+    <!-- end: Total amount --> 
+    
+  </div>
+</div>
+<%end%>
+

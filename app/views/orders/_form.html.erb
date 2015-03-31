@@ -1,0 +1,99 @@
+
+<div class="containers">
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h3><%=@page_title%></h3></div>
+          <div class="panel-body">
+          <%= form_for(@order) do |f| %>
+          <table class="table table-striped">
+             <% if @page_title=='New Order' %>
+          <tr>
+            <td>
+              <%= f.label :account_id, "User" %></td><td>
+              <%= f.collection_select :account_id, @account, :id, :full_name, :include_blank => "Admin" %></td>
+            </tr>
+            <% else%>
+            <tr>
+              <td><%= f.label :account_id %></td>
+              <td><%= f.text_field :account_id, disabled: true %></td>
+            </tr>
+            <% end%>
+              <tr id="active"><td>
+              <%= f.label :active_status %></td><td>
+              <%= f.check_box :active_status%></td>
+              </tr>
+           
+              <tr id="pay"><td>
+              <%= f.label :pay_status %></td><td>
+              <%= f.check_box :pay_status %></td>
+              </tr>
+           
+              <tr id="ship"><td>
+              
+              <%= f.label :ship_status %></td><td>
+              <%= f.check_box :ship_status %></td>
+              </tr>
+            
+
+            <tr><td>
+            <%= f.label :pay_type, "Pay type*" %></td><td>
+            <%= f.text_field :pay_type,class:"form-control", require: true %></td>
+            </tr><tr><td>
+            <%= f.label :amount, "Amount*" %></td><td>
+            <%= f.number_field :amount,class:"form-control", require: true%></td>
+            </tr><tr><td>
+            <%= f.label :ship_at %></td><td>
+            <%= f.datetime_select("ship_at", start_year:2000) %></td>
+            </tr><tr><td></td><td>
+            <%= f.submit "Save order", class:"btn btn-primary" %>
+            </td>
+          </tr>
+          </table>
+            <br>
+            <%= link_to 'Show', @order %> |
+            <%= link_to 'Back', orders_path %>  
+            <% end %>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('#order_account_id').select2({
+     placeholder: "Select your Market"
+    });
+    $("#ship").hide();
+    $("#pay").hide();
+    $("#active").change(function(){
+      var x = document.getElementById('order_active_status').checked;
+      if (x==true){
+        $("#pay").show();
+      }else{
+        document.getElementById('order_ship_status').checked = false;
+        document.getElementById('order_pay_status').checked = false;
+        $("#pay").hide();
+        $("#ship").hide();
+      }
+    });
+    $("#pay").change(function(){
+      var y = document.getElementById('order_pay_status').checked;
+      if (y==true){
+        $("#ship").show();
+      }else{
+        document.getElementById('order_ship_status').checked=false;
+        $("#ship").hide();
+      }
+      
+    });
+
+  });
+
+</script>

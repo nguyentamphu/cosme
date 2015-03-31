@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active_status: false
+  pay_status: false
+  ship_status: false
+  pay_type: MyString
+  amount: 1
+  ship_at: 2015-01-13 14:06:26
+  is_delete: false
+
+two:
+  active_status: false
+  pay_status: false
+  ship_status: false
+  pay_type: MyString
+  amount: 1
+  ship_at: 2015-01-13 14:06:26
+  is_delete: false

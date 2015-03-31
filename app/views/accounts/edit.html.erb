@@ -1,0 +1,21 @@
+<div id="content_body" class="bace_bg">
+  <div  class="panel panel-default">
+    <div class="panel-heading"> 
+    <%= render partial:"accounts/header" %>
+    </div>
+      <% if session[:id]==nil %>
+        <% redirect_to products_path %>
+      <% else %>
+        <div class="containers">
+          <div class="row">
+              <div class="col-sm-12">
+                <div class="content">
+                  <%= render 'form' %>  
+                </div>
+                <div class="col-sm-4"></div>
+              </div>
+          </div>
+        </div>
+      <% end -%>  
+  </div>
+</div>

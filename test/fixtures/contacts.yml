@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mail: MyString
+  phone: MyString
+  content_send: MyString
+  status: false
+  reply_title: MyString
+  content_reply: MyString
+  is_delete: false
+
+two:
+  name: MyString
+  mail: MyString
+  phone: MyString
+  content_send: MyString
+  status: false
+  reply_title: MyString
+  content_reply: MyString
+  is_delete: false
+

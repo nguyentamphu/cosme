@@ -1,0 +1,46 @@
+Dear <%= @username %>! <br><br>
+Thank you for purchasing our products!<br>
+_______________________________________________________________________________________
+<% total = 0%>
+<h2>Cart (<%= @session_cart.size() %> Items)</h2>
+            <table style="width:97%;border-spacing:0;margin:0 auto 5px;border-color:#dddddd #dddddd #dddddd;border-radius:4px;border-style:solid solid solid none;border-width:1px 1px 1px 0" cellpadding="8">
+              <thead>
+                <tr>
+                  <th style="border-left:1px solid #dddddd"> #</th>
+                  <th style="border-left:1px solid #dddddd"> Product</th>
+                  <th style="border-left:1px solid #dddddd"> Old Price</th>
+                  <th style="border-left:1px solid #dddddd"> Price</th>
+                  <th style="border-left:1px solid #dddddd"> Quantity</th>
+                  <th style="border-left:1px solid #dddddd"> Amount</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% counnt_user =0 %>
+                <% @session_cart.each do |s| %>
+                  <tr>
+                    <td style="border-left:1px solid #dddddd"> <%= counnt_user = counnt_user+1 %></td>
+
+                    <td style="border-left:1px solid #dddddd"> <%= s[1]["name"] %></td>
+
+                    <td style="border-left:1px solid #dddddd"> <%= number_to_currency(s[1]["old_price"]) %></td>
+
+                    <td style="border-left:1px solid #dddddd"> <%= number_to_currency(s[1]["price"]) %></td>
+                    <td style="border-left:1px solid #dddddd"> <%= s[1]["qty"]%></td>
+                    <td style="border-left:1px solid #dddddd"> <%= number_to_currency(s[1]["amount"]) %> 
+                      <% total = (total +s[1]["amount"].to_i) %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <br>
+             <div>Total: <%= number_to_currency(total) %></div>
+             <br>
+_________________________________________________________________________________<br>
+Thanks and see you later<br>
+Company: CosmeJapan - BEAUTYFUL ONLY STORE<br>
+Phone: 01668845453 <br>
+Email: cosmejapantpt@gmail.com<br>
+Address: 7th floor, Indochina Bulding<br>
+copyright © 2015 CosmeJapan all rights reserved<br>
+_________________________________________________________________________________

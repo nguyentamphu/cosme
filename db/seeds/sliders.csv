@@ -1,0 +1,4 @@
+id,title,image,is_delete,created_at,updated_at
+1,Slider001,Slider01.jpg,0,"2015-02-27 03:47:47","2015-02-27 03:47:47"
+2,Slider002,Slider02.jpg,0,"2015-02-27 03:48:11","2015-02-27 03:48:11"
+3,Slider003,Slider03.jpg,0,"2015-02-27 03:48:23","2015-02-27 03:48:23"

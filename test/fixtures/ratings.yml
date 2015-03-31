@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 
+  is_delete: 
+
+two:
+  rating: 
+  is_delete: 
+  rating: 1
+  is_delete: false
