@@ -40,8 +40,8 @@ class OrdersController < ApplicationController
     if @order.save
       order = Order.select("id").order("id DESC").limit(1)
       session[:cart].each do |s|
-        @orders_detail = OrdersDetail.new(price: s[1]["amount"], quantity: s[1]["qty"], 
-          order_id: order[0]["id"]  , product_id: s[1]["id"])
+        @orders_detail = OrdersDetail.new(price: s[1]["amount"], quantity: s[1]["qty"],
+                                          order_id: order[0]["id"]  , product_id: s[1]["id"])
         @orders_detail.is_delete =0
         @orders_detail.save
         product = Product.find_by(id: s[1]["id"])
@@ -56,14 +56,14 @@ class OrdersController < ApplicationController
   end
 
   private
-  
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:account_id,:active_status, :pay_status, :ship_status, :pay_type, :amount, :ship_at, :is_delete)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order
+    @order = Order.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_params
+    params.require(:order).permit(:account_id,:active_status, :pay_status, :ship_status, :pay_type, :amount, :ship_at, :is_delete)
+  end
 end

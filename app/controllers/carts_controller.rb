@@ -3,7 +3,7 @@ class CartsController < ApplicationController
 
   def new
     if session[:cart] == nil
-    redirect_to products_path
+      redirect_to products_path
     end
   end
 
@@ -15,13 +15,13 @@ class CartsController < ApplicationController
         session[:cart][params[:id]]["amount"] = (session[:cart][params[:id]]["qty"].to_i  * price).to_s
       else
         cart = Cart.new(params[:id], params[:name], params[:image_id],
-         params[:image], params[:qty], params[:price], price, params[:sale],  price)
+                        params[:image], params[:qty], params[:price], price, params[:sale],  price)
         @cart =cart.as_json
         session[:cart][params[:id]] = @cart
       end
     else
-      cart = Cart.new(params[:id], params[:name], params[:image_id], 
-        params[:image], params[:qty], params[:price], price, params[:sale],  price)
+      cart = Cart.new(params[:id], params[:name], params[:image_id],
+                      params[:image], params[:qty], params[:price], price, params[:sale],  price)
       @cart =cart.as_json
       session[:cart] = {}
       session[:cart][params[:id]] = @cart
@@ -33,7 +33,7 @@ class CartsController < ApplicationController
     total = 0
     pro = Product.find_by(id: params[:id])
     session[:cart].each do |s|
-      params.each do |k,v| 
+      params.each do |k,v|
         if s[1]["id"] == k
           if pro.quantity < v.to_i
             @tb = "We are #{pro.quantity} #{pro.name}. Please select your quantity!!!"
@@ -48,31 +48,31 @@ class CartsController < ApplicationController
     end
     render json: {"tb"=> @tb , "total"=> total, "session_cart"=>session[:cart]}
   end
-	
+
   def destroy
     session[:cart].each do |s|
       if s[1]['id']== params[:id]
         session[:cart].delete(params[:id])
         redirect_to new_cart_path
-      end 
+      end
     end
   end
-      
 
-   private
-   def price
+
+  private
+  def price
     if params[:sale]== 0
       params[:price].to_i
     else
       (params[:price].to_i - (params[:price].to_i * params[:sale].to_i/100))
     end
-   end
-    
+  end
+
 end
 
 class Cart
-	def initialize(id, name, image_id, image, qty, old_price, price, sale, amount)
-		@id, @name, @image_id,  @image, @qty, @old_price, @price, 
-    @sale, @amount = id, name, image_id, image, qty, old_price, price, sale, amount
-	end
+  def initialize(id, name, image_id, image, qty, old_price, price, sale, amount)
+    @id, @name, @image_id,  @image, @qty, @old_price, @price,
+      @sale, @amount = id, name, image_id, image, qty, old_price, price, sale, amount
+  end
 end

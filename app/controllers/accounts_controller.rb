@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   layout 'public'
-  before_action :set_account, only: [:show, :edit, :update, :destroy] 
+  before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts
   # GET /accounts.json
@@ -14,7 +14,7 @@ class AccountsController < ApplicationController
 
   # GET /accounts/new
   def new
-     @account = Account.new
+    @account = Account.new
   end
 
   # GET /accounts/1/edit
@@ -24,15 +24,15 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.json
   def create
- 
+
     if params[:account][:role]=='admin'
       @check_role='admin'
     end
     @account = Account.new(account_params)
     accounts = Account.find_by(email: account_params[:email])
-    if accounts.present?  
+    if accounts.present?
       redirect_to new_account_path, notice:'Enter a valid email address'
-    else 
+    else
       respond_to do |format|
         if @account.save
           @acc = Account.find_by(email: account_params[:email])
@@ -43,7 +43,7 @@ class AccountsController < ApplicationController
           format.html { render :new }
           format.json { render json: @account.errors, status: :unprocessable_entity }
         end
-     end
+      end
     end
   end
 
@@ -64,14 +64,14 @@ class AccountsController < ApplicationController
   end
 
   private
-    
-    # Use callbacks to share common setup or constraints between actions.
-    def set_account
-      @account = Account.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def account_params
-      params.require(:account).permit(:email, :password, :role, :full_name, :tel, :birthday, :address, :gender, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_account
+    @account = Account.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def account_params
+    params.require(:account).permit(:email, :password, :role, :full_name, :tel, :birthday, :address, :gender, :image)
+  end
 end
