@@ -51,5 +51,5 @@ test:
 production:
   <<: *default
   database: cosme_db
-  username: cosmejapan
-  password: <%= ENV['COSMEJAPAN_DATABASE_PASSWORD'] %>
+  username: root
+  password: root
