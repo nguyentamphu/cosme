@@ -79,9 +79,6 @@ end
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'autoprefixer-rails'
 
-#Use ckeditor
-gem 'ckeditor'
-
 #Pagination
 gem 'will_paginate-bootstrap'
 

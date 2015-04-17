@@ -1,8 +1,13 @@
 @app_path = dirname = File.expand_path(".", Dir.pwd)
 
-worker_processes 2
-working_directory "#{@app_path}/"
+#worker_processes 2
+#working_directory "#{@app_path}/"
 
+#app2 
+root = "/home/xv/cosme"
+working_directory root
+pid "#{root}/tmp/pids/unicorn-app2.pid"
+listen "/tmp/unicorn.app2.sock"
 # This loads the application in the master process before forking
 # worker processes
 # Read more about it here:
@@ -13,9 +18,9 @@ timeout 30
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-listen "/tmp/unicorn.sock", :backlog => 64
+#listen "/tmp/unicorn.sock", :backlog => 64
 
-pid "/tmp/unicorn.pid"
+#pid "/tmp/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the testapp
 stderr_path "#{@app_path}/log/unicorn.stderr.log"

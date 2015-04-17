@@ -14,7 +14,8 @@
         <div class="searchbar">
           <%= form_tag products_path , method: :get, :id => "products_search" do %>
             <div class="searchbox pull-right">
-              <%= text_field_tag :search, params[:search],class: "searchinput", placeholder:"Search...", type: "search" %>
+              <i><%= text_field_tag :search, params[:search],class: "searchinput", placeholder:"Search...", type: "search", style: "padding: 0px 20px" %>
+              </i>
               <button class="fa fa-search fa-fw" type="submit"></button>
             </div>
           <% end %>

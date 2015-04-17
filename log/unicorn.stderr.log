@@ -214,3 +214,43 @@ I, [2015-04-16T15:52:00.951275 #20926]  INFO -- : listening on addr=/tmp/unicorn
 I, [2015-04-16T15:52:01.961591 #20932]  INFO -- : worker=0 ready
 I, [2015-04-16T15:52:02.963472 #20926]  INFO -- : master process ready
 I, [2015-04-16T15:52:02.966773 #20936]  INFO -- : worker=1 ready
+I, [2015-04-16T17:05:21.318589 #20926]  INFO -- : reaped #<Process::Status: pid 20932 exit 0> worker=0
+I, [2015-04-16T17:05:21.318725 #20926]  INFO -- : reaped #<Process::Status: pid 20936 exit 0> worker=1
+I, [2015-04-16T17:05:21.318780 #20926]  INFO -- : master complete
+I, [2015-04-17T09:30:44.381932 #4695]  INFO -- : Refreshing Gem list
+I, [2015-04-17T09:30:51.741834 #4695]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T09:30:51.741976 #4695]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
+I, [2015-04-17T09:30:51.742045 #4695]  INFO -- : listening on addr=/tmp/unicorn.sock fd=12
+I, [2015-04-17T09:30:52.786190 #4695]  INFO -- : master process ready
+I, [2015-04-17T09:30:52.891209 #4702]  INFO -- : worker=0 ready
+I, [2015-04-17T09:31:27.465746 #4695]  INFO -- : reaped #<Process::Status: pid 4702 exit 0> worker=0
+I, [2015-04-17T09:31:27.465885 #4695]  INFO -- : master complete
+I, [2015-04-17T09:50:18.422453 #5180]  INFO -- : Refreshing Gem list
+I, [2015-04-17T09:50:20.183077 #5180]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T09:50:20.183221 #5180]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T09:50:21.189754 #5180]  INFO -- : master process ready
+I, [2015-04-17T09:50:21.192870 #5193]  INFO -- : worker=0 ready
+/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
+/home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:206:in `pid=': Already running on PID:5180 (or pid=/home/xv/cosme/tmp/pids/unicorn-app2.pid is stale) (ArgumentError)
+	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:135:in `start'
+	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
+	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2015-04-17T10:45:11.913257 #5180]  INFO -- : reaped #<Process::Status: pid 5193 exit 0> worker=0
+I, [2015-04-17T10:45:11.913502 #5180]  INFO -- : master complete
+I, [2015-04-17T10:45:20.949235 #5901]  INFO -- : Refreshing Gem list
+I, [2015-04-17T10:45:22.720264 #5901]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T10:45:22.720402 #5901]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T10:45:23.729026 #5901]  INFO -- : master process ready
+I, [2015-04-17T10:45:23.735213 #5913]  INFO -- : worker=0 ready
+I, [2015-04-17T10:50:15.465424 #5901]  INFO -- : reaped #<Process::Status: pid 5913 exit 0> worker=0
+I, [2015-04-17T10:50:15.465553 #5901]  INFO -- : master complete
+I, [2015-04-17T10:50:19.161986 #6089]  INFO -- : Refreshing Gem list
+I, [2015-04-17T10:50:21.003420 #6089]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T10:50:21.003559 #6089]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T10:50:22.013308 #6089]  INFO -- : master process ready
+I, [2015-04-17T10:50:22.023828 #6101]  INFO -- : worker=0 ready
+/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
+D, [2015-04-17T11:56:47.437873 #6089] DEBUG -- : waiting 16.0s after suspend/hibernation
