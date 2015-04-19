@@ -254,3 +254,25 @@ I, [2015-04-17T10:50:22.013308 #6089]  INFO -- : master process ready
 I, [2015-04-17T10:50:22.023828 #6101]  INFO -- : worker=0 ready
 /home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
 D, [2015-04-17T11:56:47.437873 #6089] DEBUG -- : waiting 16.0s after suspend/hibernation
+I, [2015-04-17T13:39:44.815809 #11116]  INFO -- : Refreshing Gem list
+I, [2015-04-17T13:39:46.556896 #11116]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T13:39:46.557012 #11116]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T13:39:47.565613 #11116]  INFO -- : master process ready
+I, [2015-04-17T13:39:47.570759 #11120]  INFO -- : worker=0 ready
+/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
+I, [2015-04-17T14:47:07.123529 #11116]  INFO -- : reaped #<Process::Status: pid 11120 exit 0> worker=0
+I, [2015-04-17T14:47:07.123676 #11116]  INFO -- : master complete
+I, [2015-04-17T14:47:39.143769 #13031]  INFO -- : Refreshing Gem list
+I, [2015-04-17T14:47:40.968315 #13031]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T14:47:40.968441 #13031]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T14:47:41.978590 #13031]  INFO -- : master process ready
+I, [2015-04-17T14:47:41.986207 #13044]  INFO -- : worker=0 ready
+I, [2015-04-17T14:49:54.685442 #13031]  INFO -- : reaped #<Process::Status: pid 13044 exit 0> worker=0
+I, [2015-04-17T14:49:54.685582 #13031]  INFO -- : master complete
+I, [2015-04-17T14:50:00.685474 #13138]  INFO -- : Refreshing Gem list
+I, [2015-04-17T14:50:02.766556 #13138]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
+I, [2015-04-17T14:50:02.766711 #13138]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-17T14:50:03.773846 #13138]  INFO -- : master process ready
+I, [2015-04-17T14:50:03.777068 #13150]  INFO -- : worker=0 ready
+I, [2015-04-17T17:33:20.249210 #13138]  INFO -- : reaped #<Process::Status: pid 13150 exit 0> worker=0
+I, [2015-04-17T17:33:20.249319 #13138]  INFO -- : master complete
