@@ -1,0 +1,162 @@
+<style type="text/css">
+.text-right {
+text-align    : right;
+vertical-align: middle;
+}
+div>span>input {
+background-color: #DFF0D8;
+height: 13px;
+margin-left: 20px;
+}
+div>input {
+background-color: #DFF0D8;
+height: 40px;
+width: 100%;
+margin: 5px 0px;
+}
+.form-group{
+margin-bottom: 30px;
+}
+.form-control{
+padding: 0px 12px;
+}
+.radio-btn {
+padding-left: 12px;
+padding-right: 10px;
+}
+img {
+width: 150px;
+height: 100px;
+}
+#notice {
+padding-top: 23px;
+padding-left: 15px;
+color: red;
+font-style: italic;
+}
+ul>li {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+</style>
+<%= form_for(@account) do |f| %>
+
+<div class="form-group">
+  <div>
+    <%= f.label "Email*" %>
+  </div>
+  <div class="form-control">
+    <%= f.email_field :email, placeholder: "Input email", required: true %>
+  </div>
+  <% if notice%>
+  <div class="form-control">
+    <i class="fa fa-warning" aria-hidden="true" id="notice"><%= notice %></i>
+  </div>
+  <%end%>
+  <% if @account.errors[:email] %>
+  <div class="form-control">
+  <ul>
+    <li style="color: red"><%= @account.errors[:email][0] %></li>
+  </ul>
+  </div>
+  <% end -%>
+</div>
+<div class="form-group">
+  <div>
+    <%= f.label "Password*" %>
+  </div>
+  <div class="form-control">
+    <%= f.password_field :password, placeholder: "Input password", required: true %>
+  </div>
+  <% if @account.errors[:password] %>
+  <div class="form-control">
+  <ul>
+    <li style="color: red"><%= @account.errors[:password][0] %></li>
+  </ul>
+  </div>
+  <% end -%>
+</div>
+<div class="form-group">
+  <div>
+    <%= f.label "Fullname*" %>
+  </div>
+  <div class="form-control">
+    <%= f.text_field :full_name, placeholder: "Input fullname", required: true %>
+  </div>
+</div>
+<div class="form-group">
+  <div>
+    <%= f.label "Day of birth*" %>
+  </div>
+  <div class="form-control">
+    <%= f.date_select :birthday, use_short_month: true, start_year: Time.now.year - 50, end_year: Time.now.year + 50,
+    date_separator: '/ ', placeholder: "Input day of birth", required: true %>
+  </div>
+</div>
+<div class="form-group">
+  <div>
+    <%= f.label "Address*" %>
+  </div>
+  <div class="form-control">
+    <%= f.text_field :address, placeholder: "Input address", required: true %>
+  </div>
+</div>
+<div class="form-group">
+  <div>
+    <%= f.label "Phone number*" %>
+  </div>
+  <div class="form-control">
+    <%= f.text_field :tel, placeholder: "Input phone nubmer", required: true %>
+  </div>
+</div>
+<div class="form-group" >
+  <div>
+    <%= f.label "Gender*" %>
+  </div>
+  <div>
+    <div>
+      <%= f.label "Male", class: "radio-btn", style: "padding-right: 27px" %>
+      <span>
+        <%= f.radio_button :gender, '1', {:checked => true} %>
+      </span>
+    </div>
+    <div>
+      <%= f.label "Female", class: "radio-btn" %>
+      <span>
+        <%= f.radio_button :gender, '0' %>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <%= f.label "Avatar profile" %>
+  <%= f.file_field :image, id: "select_image", class: "form-control" %>
+  <% if @account.image? %>
+  <%= image_tag @account.image, class: "img-thumbnail", id: 'show_select_image'%>
+  <% else %>
+  <div id='show_selection'></div>
+  <% end -%>
+</div>
+<div style="text-align: right">
+  <i>(*) Require fields</i>
+</div>
+<div style="text-align:center">
+  <%= f.submit "Sign up", class: "btn btn-primary", style: "width: 20%; text-align: center"%>
+</div>
+<% end -%>
+<!-- Javascript -->
+<script type="text/javascript">
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('#show_selection').html("<img id='show_select_image', class='img-thumbnail'/>")
+$('#show_select_image').attr('src', e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+$("#select_image").change(function(){
+readURL(this);
+});
+</script>

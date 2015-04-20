@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  layout 'public'
+  layout '_form_public', only: [:new, :create, :edit]
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts
@@ -24,24 +24,26 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.json
   def create
-
+    # binding.pry
     if params[:account][:role]=='admin'
       @check_role='admin'
     end
     @account = Account.new(account_params)
-    accounts = Account.find_by(email: account_params[:email])
+    accounts = Account.find_by(email: account_params[:email], is_delete: '0')
     if accounts.present?
-      redirect_to new_account_path, notice:'Enter a valid email address'
+      redirect_to new_account_path, notice:'E-mail existed!'
     else
       respond_to do |format|
+        @account.is_delete = '0'
         if @account.save
           @acc = Account.find_by(email: account_params[:email])
           SendMailer.user_email(@acc).deliver
-          format.html { redirect_to new_account_path, notice: 'Account was successfully created.' }
+          format.html { redirect_to root_path }
           format.json { render :show, status: :created, location: @account }
-        else
+        else  
           format.html { render :new }
           format.json { render json: @account.errors, status: :unprocessable_entity }
+          binding.pry 
         end
       end
     end

@@ -1,9 +1,21 @@
+
+
 <style type="text/css">
 .form-control {
 background-color: #DFF0D8;
 }
 td {
 padding-left: 20px !important;
+}
+#notice {
+  color: red;
+}
+input { 
+  height: 13px;
+}
+img {
+  width: 50%;
+  height: 50%;
 }
 </style>
 <%= form_for(@account) do |f| %>
@@ -25,7 +37,7 @@ padding-left: 20px !important;
           <%= f.email_field :email, placeholder:"Input your email", required: true, class: "form-control"%>
           <div>
             <% if notice%>
-            <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true" id="notice"><%= notice %></span>
+            <i class="fa fa-warning" aria-hidden="true" id="notice"><%= notice %></i>
             <%end%>
           </div>
         </div>
@@ -72,18 +84,47 @@ padding-left: 20px !important;
     </table>
   </div>
   <div class="col-sm-4">
-    <div class="form-group">
+    <div class="form-group" >
       <%= f.label :Gender %><br>
-      <%= f.label :Male %>
-      <%= f.radio_button :gender, 1 %>
+      <%= f.label :Male %>  
+      <%= f.radio_button :gender, '1', {:checked => true} %>
       <%= f.label :Female %>
-      <%= f.radio_button :gender, 0 %>
+      <%= f.radio_button :gender, '0' %>
     </div>
     <div class="form-group">
       <%= f.label :Avatar %>
-      <%= f.file_field :image, class: "form-control" %>
+      <%= f.file_field :image, id: "select_image", class: "form-control" %>
+      <% if @account.image? %>
+        <%= image_tag @account.image, class: "img-thumbnail", :id => 'show_select_image'%>
+      <% else %>
+        <%= image_tag( '', :id => 'show_select_image') %>
+      <% end -%>
     </div>
-    <div class="pull-right"><%= f.submit :Submit, class:"btn btn-primary pull-left" %>
+    <div class="pull-right"><%= f.submit :Submit, class:"btn btn-primary pull-left", style: "height: 48px" %>
     </div>
     <% end %>
   </div>
+
+  <!-- JS -->
+<script type="text/javascript">
+  // $(document).ready(function(){
+  //   $('#artist_category').select2({
+  //    placeholder: "Select your Market"
+  //   });
+  // }); 
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#show_select_image').attr('src', e.target.result);
+            $('#show_select_image').attr('width', '200').attr('height','100');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+  }
+$("#select_image").change(function(){
+    readURL(this);
+});
+
+</script>

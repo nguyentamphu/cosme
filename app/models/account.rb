@@ -3,7 +3,7 @@ class Account < ActiveRecord::Base
 	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 	validates :password , presence: true, length: { minimum: 6 }
 	validates :full_name , presence: true, length: { minimum: 1 }
-    mount_uploader :image, ImageUploader
+	mount_uploader :image, ImageUploader
 	has_many :orders
 	has_many :comments
 	has_many :ratings
@@ -14,4 +14,3 @@ class Account < ActiveRecord::Base
 	 end
 
 end
-
