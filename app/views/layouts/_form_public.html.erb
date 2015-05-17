@@ -3,8 +3,6 @@
   <head>
     <title>CosmeJapan-BEAUTYFUL ONLINE STORE</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag 'custom', 'iview', 'style-switch', 'menu3d', 'normalize', 'animate', 'color', 'font-awesome' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -18,14 +16,21 @@
     }(document, 'script', 'facebook-jssdk'));</script>
   </div>
   <!-- Header -->
-  <header>
-    <!-- Top Heading Bar -->
-    <%= render 'layouts/top_heading_bar' %>
-    <!-- end: Top Heading Bar -->
-    <!-- search & logo -->
-    <div class="f-space20"></div>
+  <header style="padding-top: 20px">
+
     <!-- Logo and Search -->
-    <%= render 'layouts/search_logo' %>
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-3 col-xs-12">
+          <div class="logo"> <%= link_to "
+            <div class='logoimage'><i class='fa fa-shopping-cart fa-fw'></i></div>
+            <div class='logotext'><span><strong>CosmeJapan</strong></div>
+            <span class='slogan'>ONLINE STORE</span>".html_safe, products_path, title: "CosmeJapan" %>
+          </div>
+        </div>
+        <!-- end: logo -->
+      </div>
+    </div>
     <!-- end: Logo and Search -->
     <div class="f-space20"></div>
   </header>
@@ -39,13 +44,16 @@
 <!-- end: Products -->
 <!-- Widgets -->
 <!-- end: Widgets -->
-<div class="row clearfix f-space30"></div>
 <!-- footer -->
-<footer class="footer">
-  <div class="containers">
-    <%= render 'layouts/footer' %>
+<footer>
+<div class="copyrights">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2015 by <a href="index.htm">Cosmejapan</a> -  All rights reserved</span>
+      </div>
+    </div>
   </div>
-</footer>
+  </footer>
 <!-- end: footer -->
 <script>
 $(document).ready(function(){

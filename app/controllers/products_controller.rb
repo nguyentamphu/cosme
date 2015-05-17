@@ -1,15 +1,13 @@
 class ProductsController < ApplicationController
-  layout 'public'
+  before_action :products_layout
+  layout :products_layout
 
-  # GET /products
-  # GET /products.json
   def index
     @products = Product.search(params[:search]).group('products.id').page(params[:page]).per_page(8)
-    # render json: @products
+    @articles = Article.all.where(is_delete: 0)
+    # binding.pry
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     # @product_images = ProductImage.where('product_id =?', params[:id])
     @product = Product.joins("left JOIN ratings ON ratings.product_id = products.id
@@ -21,10 +19,8 @@ class ProductsController < ApplicationController
      ifnull(DATEDIFF(Now(), products.created_at),0) as new, products.detail, products.created_at,
       IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
       product_images.image, avg(ratings.rating) as rating').find(params[:id])
-    # render json: @product
   end
 
-  # GET /products/new
   def new
     @product  = Product.new
   end
@@ -48,9 +44,16 @@ class ProductsController < ApplicationController
 
   private
 
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
     params.require(:product).permit(:name, :serial, :height, :detail, :price, :sale_off, :quantity, :discount, :is_delete, :brand_id, :category_id)
+  end
+
+  def products_layout
+    if action_name == 'index'
+      "public"
+    else
+      "product"
+    end
   end
 end

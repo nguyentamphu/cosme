@@ -14,7 +14,7 @@
             <% if session[:cart] %>
             <li><%= link_to "<i class='fa fa-shopping-cart fa-fw'></i> <span class='hidden-sm'>My Cart (#{session[:cart].size()}) Items</span>".html_safe, new_cart_path, id: 'count_item_carts' %></li>
             <%end %>
-            <li><%= link_to "<i class='fa fa-user fa-fw'></i> <span class='hidden-xs'>Hi! #{session[:name]}</span>".html_safe, account_path(session[:id]) %></li>  
+            <li><%= link_to "<i class='fa fa-user fa-fw'></i> <span class='hidden-xs'>Hi! #{session[:user]}</span>".html_safe, account_path(session[:id]) %></li>  
             <li>
               <%= link_to "<i class='fa fa-sign-out fa-fw'></i> <span class='hidden-xs'>Sign Out</span>".html_safe, {:controller=> "sessions", :action=> "destroy", :id=> 1}, :method => :delete %></li> 
             <%else %>

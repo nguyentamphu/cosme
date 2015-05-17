@@ -19,8 +19,8 @@
           <div class="box-content slide carousel-fade" id="blogslide">
             <div class="carousel-inner">
                 <!-- Post -->
+                <div class="blog-entry">
                 <%@articles.each do |article|%>
-                <div class="blog-entry item active">
                   <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
                   News Post</span> <%= image_tag (article.image), class: 'ani-image', height: '321' %>  </div>
                   <div class="entry-row">
@@ -28,9 +28,15 @@
                     <div class="blog-text"> <span><%=article.description%></span>
                       <span>  <a href="index.htm#a"> <i class="fa fa-comments fa-fw"></i>Read more</a> </span> </div>
                     </div>
-                  </div>
                 <%end%>
+                  </div>
                   <!--END Post -->
+                </div>
+                 <div class="carousel-controls">
+                    <a class="carousel-control left" data-slide="prev" href="http://themes.logoby.us/flatro/#blogslide">  <i class="fa fa-angle-left fa-fw"></i>
+                    </a>
+                    <a class="carousel-control right" data-slide="next" href="http://themes.logoby.us/flatro/#blogslide"> <i class="fa fa-angle-right fa-fw"></i>
+                    </a>
                 </div>
               </div>
               <!-- end: Blog widget Box -->

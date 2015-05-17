@@ -1,8 +1,13 @@
+<style type="text/css">
+  .nav>li>a:hover{
+    background-color: #2a6496;
+  }
+</style>
 <div class="masthead">
   <nav>
     <ul class="nav nav-justified">
-      <li class="active"><%= link_to "Account info" , { controller:"accounts", action:"show", id: session[:id] } %></li>
-      <li><%= link_to  "Account seting", { controller:"accounts", action:"edit", id: session[:id] } %></li>
+      <li><%= link_to "Profile information" , { controller:"accounts", action:"show", id: session[:id] } %></li>
+      <li><%= link_to "Edit profile", { controller:"accounts", action:"edit", id: session[:id] } %></li>
       <li><%= link_to "History Order", { controller:"orders", action:"index" } %></li>
     </ul>
   </nav>

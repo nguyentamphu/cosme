@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CosmeJapan-BEAUTYFUL ONLINE STORE</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'custom', 'iview', 'style-switch', 'menu3d', 'normalize', 'animate', 'color', 'font-awesome' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=335579889978240&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </div>
+  <!-- Header -->
+  <header>
+    <!-- Top Heading Bar -->
+    <%= render 'layouts/top_heading_bar' %>
+    <!-- end: Top Heading Bar -->
+    <!-- search & logo -->
+    <div class="f-space20"></div>
+    <!-- Logo and Search -->
+    <%= render 'layouts/search_logo' %>
+    <!-- end: Logo and Search -->
+    <!-- Menu -->
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menu-col">
+          <div class="menu-heading menuHeadingdropdown"> <span> <i class="fa fa-bars"></i> Categories</span>
+                <i class="fa fa-angle-down"></i>
+          </div>
+          <!-- Mega Menu -->
+          <div class="menu3dmega vertical menuMegasub responsive skin-blue-dark" id="menuMega">
+           <!-- menuToggle here -->
+            <ul>
+              <% @medium_categories.each do |big| %>
+                <li><%= link_to "<i class='fa fa-bars'></i><span>#{big.name}</span>".html_safe, product_categories_list_path(big.id), id:'big_categories_menu' %>
+                </li>
+              <% end %>
+
+             <!--  <li class="hidden-xs"> <a href="./Flatro - Online Shop Template_files/Flatro - Online Shop Template.html">   <i class="fa fa-files-o"></i> <span>Pages</span></a>
+              </li>
+              <li class="hidden-xs"> <a href="./Flatro - Online Shop Template_files/Flatro - Online Shop Template.html">   <i class="fa fa-files-o"></i> <span>Page2</span> <i class="fa fa-angle-right"></i> </a>
+              </li>
+              <li class="hidden-xs"> <a href="./Flatro - Online Shop Template_files/Flatro - Online Shop Template.html">   <i class="fa fa-files-o"></i> <span>Page3</span> <i class="fa fa-angle-right"></i> </a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Menu Home-About-Blog-Contact -->
+         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 menu-col-2"> 
+        <!-- Navigation Buttons/Quick Cart for Tablets and Desktop Only -->
+        <div class="menu-links hidden-xs">
+          <ul class="nav nav-pills nav-justified">
+            <li> <%= link_to '<i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a>'.html_safe, root_path %> </li>
+            <li> <%= link_to '<i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span>'.html_safe %> </li>
+            <li> <%= link_to '<i class="fa fa-bullhorn fa-fw"></i> <span class="hidden-sm">Blog</span>'.html_safe %> </li>
+            <li> <%= link_to '<i class="fa fa-pencil-square-o fa-fw"></i> <span class="hidden-sm ">Contact</span>'.html_safe %></li>
+            <li class="dropdown"> 
+            <% if session[:cart] != nil %>
+              <%= link_to "<i class='fa fa-shopping-cart fa-fw'></i> <span class='hidden-sm'> #{session[:cart].size()} Items</span>".html_safe, new_cart_path, id: 'count_item_carts' %> 
+              <% else %>
+                <%= link_to "<i class='fa fa-shopping-cart fa-fw'></i> <span class='hidden-sm'> 0 Item</span>".html_safe, new_cart_path %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <!-- End-Menu Home-About-Blog-Contact -->
+      </div>
+    </div>
+<!-- end: Menu Item -->
+</header>
+<!-- end: Header -->
+<!-- Products -->
+<div class="row clearfix f-space30"></div>
+<div class="container">
+<%= yield %>
+</div>
+</div>
+<!-- end: Products -->
+<!-- Widgets -->
+<div class="row clearfix f-space30"></div>
+<div class="containers">
+<%= render 'layouts/widgets' %>
+</div>
+<!-- end: Widgets -->
+<div class="row clearfix f-space30"></div>
+<!-- footer -->
+<footer class="footer">
+<div class="containers">
+<%= render 'layouts/footer' %>
+</div>
+</footer>
+<!-- end: footer -->
+<script>
+$(document).ready(function(){
+$('#get_category_id').select2({
+placeholder: "Select your Market"
+});
+});
+(function($) {
+"use strict";
+$('#menuMega').menu3d();
+$('#iview').iView({
+pauseTime: 10000,
+pauseOnHover: true,
+directionNavHoverOpacity: 0.6,
+timer: "360Bar",
+timerBg: '#2da5da',
+timerColor: '#fff',
+timerOpacity: 0.9,
+timerDiameter: 20,
+timerPadding: 1,
+touchNav: true,
+timerStroke: 2,
+timerBarStrokeColor: '#fff'
+});
+$('.quickbox.htm').carousel({
+interval: 10000
+});
+$('#monthly-deals').carousel({
+interval: 3000
+});
+$('#productc2').carousel({
+interval: 4000
+});
+$('#tweets').carousel({
+interval: 5000
+});
+})(jQuery);
+</script>
+</body>
+</html>

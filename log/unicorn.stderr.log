@@ -276,3 +276,17 @@ I, [2015-04-17T14:50:03.773846 #13138]  INFO -- : master process ready
 I, [2015-04-17T14:50:03.777068 #13150]  INFO -- : worker=0 ready
 I, [2015-04-17T17:33:20.249210 #13138]  INFO -- : reaped #<Process::Status: pid 13150 exit 0> worker=0
 I, [2015-04-17T17:33:20.249319 #13138]  INFO -- : master complete
+I, [2015-04-29T16:58:06.130209 #10266]  INFO -- : Refreshing Gem list
+I, [2015-04-29T16:58:08.413364 #10266]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-29T16:58:09.481880 #10266]  INFO -- : master process ready
+I, [2015-04-29T16:58:09.587852 #10290]  INFO -- : worker=0 ready
+D, [2015-04-29T18:22:53.019398 #10266] DEBUG -- : waiting 16.0s after suspend/hibernation
+I, [2015-04-29T18:23:13.082545 #10266]  INFO -- : reaped #<Process::Status: pid 10290 exit 0> worker=0
+I, [2015-04-29T18:23:13.082657 #10266]  INFO -- : master complete
+I, [2015-04-30T22:35:42.254569 #3163]  INFO -- : Refreshing Gem list
+I, [2015-04-30T22:36:26.051911 #3163]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
+I, [2015-04-30T22:36:27.120702 #3163]  INFO -- : master process ready
+I, [2015-04-30T22:36:27.130543 #3429]  INFO -- : worker=0 ready
+/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
+I, [2015-04-30T22:51:30.717187 #3163]  INFO -- : reaped #<Process::Status: pid 3429 exit 0> worker=0
+I, [2015-04-30T22:51:30.717331 #3163]  INFO -- : master complete

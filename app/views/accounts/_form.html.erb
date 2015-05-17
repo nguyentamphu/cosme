@@ -17,6 +17,7 @@ img {
   width: 50%;
   height: 50%;
 }
+
 </style>
 <%= form_for(@account) do |f| %>
 <% if @account.errors.any? %>
@@ -97,34 +98,33 @@ img {
       <% if @account.image? %>
         <%= image_tag @account.image, class: "img-thumbnail", :id => 'show_select_image'%>
       <% else %>
-        <%= image_tag( '', :id => 'show_select_image') %>
+        <div id='show_selection'></div>
       <% end -%>
     </div>
-    <div class="pull-right"><%= f.submit :Submit, class:"btn btn-primary pull-left", style: "height: 48px" %>
+    <div class="pull-right">
+      <%= link_to "Cancel", root_path, class: "btn btn-danger", style: "height: 48px; padding-top: 14px" %>
+      <% if @btn_edit %>
+        <%= f.submit "Update", class:"btn btn-primary", style: "height: 48px" %>
+      <% else %>
+        <%= f.submit "Sign up", class:"btn btn-primary", style: "height: 48px" %>
+      <% end -%>
     </div>
     <% end %>
   </div>
 
   <!-- JS -->
 <script type="text/javascript">
-  // $(document).ready(function(){
-  //   $('#artist_category').select2({
-  //    placeholder: "Select your Market"
-  //   });
-  // }); 
-
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#show_select_image').attr('src', e.target.result);
-            $('#show_select_image').attr('width', '200').attr('height','100');
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-  }
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('#show_selection').html("<img id='show_select_image', class='img-thumbnail'/>")
+$('#show_select_image').attr('src', e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
 $("#select_image").change(function(){
-    readURL(this);
+readURL(this);
 });
-
 </script>

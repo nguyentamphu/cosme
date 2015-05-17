@@ -24343,3 +24343,651 @@ ActionController::RoutingError (No route matches [GET] "/index.htm"):
   /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
 
 
+I, [2015-04-29T16:58:13.934071 #10290]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-04-29 16:58:13 +0700
+I, [2015-04-29T16:58:13.970616 #10290]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-04-29T16:58:14.076378 #10290]  INFO -- :   Rendered products/_products.html.erb (47.8ms)
+I, [2015-04-29T16:58:14.076527 #10290]  INFO -- :   Rendered products/index.html.erb within layouts/public (59.6ms)
+I, [2015-04-29T16:58:14.415088 #10290]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (2.7ms)
+I, [2015-04-29T16:58:14.424499 #10290]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.9ms)
+I, [2015-04-29T16:58:14.446799 #10290]  INFO -- :   Rendered layouts/_menu.html.erb (17.2ms)
+I, [2015-04-29T16:58:14.467034 #10290]  INFO -- :   Rendered layouts/_widgets.html.erb (6.2ms)
+I, [2015-04-29T16:58:14.472236 #10290]  INFO -- :   Rendered layouts/_footer.html.erb (0.5ms)
+I, [2015-04-29T16:58:14.472610 #10290]  INFO -- : Completed 200 OK in 502ms (Views: 487.7ms | ActiveRecord: 4.9ms)
+I, [2015-04-29T16:58:14.582957 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.617661 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.754948 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.756050 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.855524 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.856772 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:14.857964 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:58:14 +0700
+I, [2015-04-29T16:58:15.337164 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:58:15 +0700
+I, [2015-04-29T16:58:15.338659 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:58:15 +0700
+I, [2015-04-29T16:58:15.339715 #10290]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-29 16:58:15 +0700
+I, [2015-04-29T16:58:17.803665 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:58:17 +0700
+I, [2015-04-29T16:58:17.904693 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:58:17 +0700
+I, [2015-04-29T16:58:18.107603 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.155015 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.249300 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.270275 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.323473 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.361131 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.381706 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.439467 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:18.454229 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:58:18 +0700
+I, [2015-04-29T16:58:37.818487 #10290]  INFO -- : Started GET "/accounts/new" for 127.0.0.1 at 2015-04-29 16:58:37 +0700
+I, [2015-04-29T16:58:37.821299 #10290]  INFO -- : Processing by AccountsController#new as HTML
+I, [2015-04-29T16:58:38.049165 #10290]  INFO -- :   Rendered accounts/_form.html.erb (180.5ms)
+I, [2015-04-29T16:58:38.049279 #10290]  INFO -- :   Rendered accounts/new.html.erb within layouts/_form_public (188.5ms)
+I, [2015-04-29T16:58:38.050822 #10290]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-29T16:58:38.051021 #10290]  INFO -- : Completed 200 OK in 230ms (Views: 220.8ms | ActiveRecord: 0.8ms)
+I, [2015-04-29T16:58:38.106165 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.111325 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.112720 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.116611 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.118362 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.119824 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.120749 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.121846 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.122839 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.123990 #10290]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.273029 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.282179 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.353203 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.407324 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.418188 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.446494 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.457755 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.493050 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.534486 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.555641 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:58:38.598568 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:58:38 +0700
+I, [2015-04-29T16:59:24.708162 #10290]  INFO -- : Started POST "/accounts" for 127.0.0.1 at 2015-04-29 16:59:24 +0700
+I, [2015-04-29T16:59:24.709268 #10290]  INFO -- : Processing by AccountsController#create as HTML
+I, [2015-04-29T16:59:24.709394 #10290]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"dYSCd1HMV11Oi0MYRwsUHJcw9uLDuBNoBCS31zZSJURFa5tEaFnlMVLMu5oEpuqey85Kt6K8I5UYy9+QzVSOkg==", "account"=>{"email"=>"tamphubkdn@gmail.com", "tel"=>"090556690433", "password"=>"[FILTERED]", "birthday(1i)"=>"2015", "birthday(2i)"=>"4", "birthday(3i)"=>"29", "full_name"=>"ntp", "address"=>"dsfds", "gender"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000038ce7d8 @tempfile=#<Tempfile:/tmp/RackMultipart20150429-10290-13dfv0m.png>, @original_filename="bigpnglogo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"account[image]\"; filename=\"bigpnglogo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Sign up"}
+I, [2015-04-29T16:59:25.159299 #10290]  INFO -- : Redirected to http://cosmejapan.local.com/accounts/new
+I, [2015-04-29T16:59:25.159443 #10290]  INFO -- : Completed 302 Found in 450ms (ActiveRecord: 0.3ms)
+I, [2015-04-29T16:59:25.162967 #10290]  INFO -- : Started GET "/accounts/new" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.163749 #10290]  INFO -- : Processing by AccountsController#new as HTML
+I, [2015-04-29T16:59:25.183405 #10290]  INFO -- :   Rendered accounts/_form.html.erb (18.6ms)
+I, [2015-04-29T16:59:25.183548 #10290]  INFO -- :   Rendered accounts/new.html.erb within layouts/_form_public (18.9ms)
+I, [2015-04-29T16:59:25.184646 #10290]  INFO -- :   Rendered layouts/_footer.html.erb (0.1ms)
+I, [2015-04-29T16:59:25.184858 #10290]  INFO -- : Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+I, [2015-04-29T16:59:25.248612 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.251928 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.253280 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.254725 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.255842 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.263984 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.265122 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.266224 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.267148 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.268138 #10290]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.350044 #10290]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.356979 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.413712 #10290]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.453037 #10290]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.463365 #10290]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.501985 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.512978 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.550622 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.694187 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.720124 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T16:59:25.739053 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 16:59:25 +0700
+I, [2015-04-29T17:00:02.586219 #10290]  INFO -- : Started POST "/accounts" for 127.0.0.1 at 2015-04-29 17:00:02 +0700
+I, [2015-04-29T17:00:02.587065 #10290]  INFO -- : Processing by AccountsController#create as HTML
+I, [2015-04-29T17:00:02.587160 #10290]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iw1tR9Dl3J5dASPRlJ8Lcvxhu+FNeHYByh9repJLPlYT4nR06XBu8kFG21PXMvXwoJ8HtCx8RvzW8AM9aU2VgA==", "account"=>{"email"=>"tamphubkdn@outlook.com", "tel"=>"09090900", "password"=>"[FILTERED]", "birthday(1i)"=>"2015", "birthday(2i)"=>"4", "birthday(3i)"=>"29", "full_name"=>"ntp", "address"=>"erew", "gender"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000067dff18 @tempfile=#<Tempfile:/tmp/RackMultipart20150429-10290-1mb9cpr.png>, @original_filename="bigpnglogo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"account[image]\"; filename=\"bigpnglogo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Sign up"}
+I, [2015-04-29T17:00:04.738821 #10290]  INFO -- : Completed 500 Internal Server Error in 2152ms
+F, [2015-04-29T17:00:04.740950 #10290] FATAL -- : 
+NoMethodError (undefined method `pry' for #<Binding:0x000000066fc4c0>):
+  app/controllers/accounts_controller.rb:47:in `block in create'
+  app/controllers/accounts_controller.rb:37:in `create'
+
+
+I, [2015-04-29T17:01:15.628726 #10290]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-29 17:01:15 +0700
+I, [2015-04-29T17:01:15.975205 #10290]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-29 17:01:15 +0700
+I, [2015-04-29T17:01:15.983988 #10290]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-29 17:01:15 +0700
+I, [2015-04-29T17:01:16.012879 #10290]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-29 17:01:16 +0700
+I, [2015-04-29T17:01:16.022500 #10290]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-29 17:01:16 +0700
+I, [2015-04-29T17:01:16.049853 #10290]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-29 17:01:16 +0700
+I, [2015-04-30T22:36:31.695538 #3429]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-04-30 22:36:31 +0700
+I, [2015-04-30T22:36:31.709118 #3429]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-04-30T22:36:31.797878 #3429]  INFO -- :   Rendered products/_products.html.erb (52.5ms)
+I, [2015-04-30T22:36:31.798062 #3429]  INFO -- :   Rendered products/index.html.erb within layouts/public (63.0ms)
+I, [2015-04-30T22:36:32.135383 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (4.1ms)
+I, [2015-04-30T22:36:32.137255 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (1.2ms)
+I, [2015-04-30T22:36:32.157707 #3429]  INFO -- :   Rendered layouts/_menu.html.erb (12.0ms)
+I, [2015-04-30T22:36:32.164602 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (6.3ms)
+I, [2015-04-30T22:36:32.178006 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.5ms)
+I, [2015-04-30T22:36:32.178417 #3429]  INFO -- : Completed 200 OK in 469ms (Views: 455.4ms | ActiveRecord: 4.3ms)
+I, [2015-04-30T22:36:32.350179 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.351859 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.353504 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.483961 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.485555 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.491696 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.554629 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.609774 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.715505 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:32.767371 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:36:32 +0700
+I, [2015-04-30T22:36:33.347190 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:36:33 +0700
+I, [2015-04-30T22:36:33.560460 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:36:33 +0700
+I, [2015-04-30T22:36:33.818558 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:36:33 +0700
+I, [2015-04-30T22:36:33.871620 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:36:33 +0700
+I, [2015-04-30T22:36:34.051198 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.091119 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.109011 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.164450 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.202409 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.243315 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:34.285448 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:36:34 +0700
+I, [2015-04-30T22:36:37.264024 #3429]  INFO -- : Started GET "/accounts/new" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.266917 #3429]  INFO -- : Processing by AccountsController#new as HTML
+I, [2015-04-30T22:36:37.469361 #3429]  INFO -- :   Rendered accounts/_form.html.erb (189.1ms)
+I, [2015-04-30T22:36:37.469491 #3429]  INFO -- :   Rendered accounts/new.html.erb within layouts/_form_public (190.1ms)
+I, [2015-04-30T22:36:37.471751 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-30T22:36:37.472055 #3429]  INFO -- : Completed 200 OK in 205ms (Views: 195.8ms | ActiveRecord: 0.7ms)
+I, [2015-04-30T22:36:37.534706 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.538259 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.544268 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.546108 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.547397 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.549064 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.550493 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.552034 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.554089 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.555459 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.689089 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.699476 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.797792 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.827909 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.864557 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.889808 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.902690 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.941606 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.955092 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:37.975945 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:36:37 +0700
+I, [2015-04-30T22:36:38.004062 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:36:38 +0700
+I, [2015-04-30T22:37:08.803633 #3429]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.805079 #3429]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-04-30T22:37:08.812643 #3429]  INFO -- :   Rendered products/_products.html.erb (6.0ms)
+I, [2015-04-30T22:37:08.812755 #3429]  INFO -- :   Rendered products/index.html.erb within layouts/public (6.3ms)
+I, [2015-04-30T22:37:08.814293 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (0.8ms)
+I, [2015-04-30T22:37:08.814693 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.3ms)
+I, [2015-04-30T22:37:08.818817 #3429]  INFO -- :   Rendered layouts/_menu.html.erb (4.0ms)
+I, [2015-04-30T22:37:08.819970 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (1.0ms)
+I, [2015-04-30T22:37:08.820111 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-30T22:37:08.820303 #3429]  INFO -- : Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+I, [2015-04-30T22:37:08.934708 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.935969 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.937323 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.938732 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.939846 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.940675 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.942250 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.943658 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.944774 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:08.946174 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:37:08 +0700
+I, [2015-04-30T22:37:09.017777 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.025765 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.146446 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.195916 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.274361 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.291721 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.337329 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.384779 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.398169 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.463493 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:09.490972 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:37:09 +0700
+I, [2015-04-30T22:37:13.563273 #3429]  INFO -- : Started GET "/products/2" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.564402 #3429]  INFO -- : Processing by ProductsController#show as HTML
+I, [2015-04-30T22:37:13.564479 #3429]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2015-04-30T22:37:13.687477 #3429]  INFO -- :   Rendered products/show.html.erb within layouts/product (4.0ms)
+I, [2015-04-30T22:37:13.708024 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (18.6ms)
+I, [2015-04-30T22:37:13.708652 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.3ms)
+I, [2015-04-30T22:37:13.711356 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (1.0ms)
+I, [2015-04-30T22:37:13.711545 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-30T22:37:13.711741 #3429]  INFO -- : Completed 200 OK in 147ms (Views: 144.4ms | ActiveRecord: 0.9ms)
+I, [2015-04-30T22:37:13.761848 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.763555 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.765289 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.766841 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.768299 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.769611 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.771510 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.772830 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.774146 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.775403 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.860332 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.862677 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:13.952000 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:37:13 +0700
+I, [2015-04-30T22:37:14.007047 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.072703 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.111773 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.122510 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.180573 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.192726 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.234350 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:37:14.254332 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:37:14 +0700
+I, [2015-04-30T22:39:44.410358 #3429]  INFO -- : Started GET "/products/2" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.412375 #3429]  INFO -- : Processing by ProductsController#show as HTML
+I, [2015-04-30T22:39:44.412526 #3429]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2015-04-30T22:39:44.420296 #3429]  INFO -- :   Rendered products/show.html.erb within layouts/product (2.9ms)
+I, [2015-04-30T22:39:44.424266 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (2.0ms)
+I, [2015-04-30T22:39:44.425302 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.6ms)
+I, [2015-04-30T22:39:44.432000 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (2.4ms)
+I, [2015-04-30T22:39:44.432438 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.1ms)
+I, [2015-04-30T22:39:44.432848 #3429]  INFO -- : Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 1.9ms)
+I, [2015-04-30T22:39:44.505645 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.507129 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.513643 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.517163 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.518982 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.520576 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.521909 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.523163 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.524456 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.525855 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.616866 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.618371 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.712494 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.805593 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.839821 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.852673 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.882721 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.937642 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.950629 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:44.987040 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:39:44 +0700
+I, [2015-04-30T22:39:45.029556 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:39:45 +0700
+I, [2015-04-30T22:40:57.902899 #3429]  INFO -- : Started POST "/carts" for 127.0.0.1 at 2015-04-30 22:40:57 +0700
+I, [2015-04-30T22:40:57.904920 #3429]  INFO -- : Processing by CartsController#create as HTML
+I, [2015-04-30T22:40:57.905061 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCGxjv21jhek+jv02LSfi9uczhR+yth030OzjXLiJfIMzqi9xCA8e7i9w3abGWEJh2JyQR/O6InDrNvKieSOJA==", "qty"=>"3", "image"=>"beach.jpg", "name"=>"Beach Defense Sunscreen Lotion Broad Spectrum SPF 30", "price"=>"9", "id"=>"2", "commit"=>"Add to Cart"}
+I, [2015-04-30T22:40:57.906443 #3429]  INFO -- : Redirected to http://cosmejapan.local.com/products
+I, [2015-04-30T22:40:57.906599 #3429]  INFO -- : Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+I, [2015-04-30T22:40:57.926694 #3429]  INFO -- : Started GET "/products" for 127.0.0.1 at 2015-04-30 22:40:57 +0700
+I, [2015-04-30T22:40:57.927820 #3429]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-04-30T22:40:57.934319 #3429]  INFO -- :   Rendered products/_products.html.erb (5.2ms)
+I, [2015-04-30T22:40:57.934485 #3429]  INFO -- :   Rendered products/index.html.erb within layouts/public (5.5ms)
+I, [2015-04-30T22:40:57.935963 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (0.6ms)
+I, [2015-04-30T22:40:57.936432 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.3ms)
+I, [2015-04-30T22:40:57.940164 #3429]  INFO -- :   Rendered layouts/_menu.html.erb (3.6ms)
+I, [2015-04-30T22:40:57.941280 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (0.9ms)
+I, [2015-04-30T22:40:57.941414 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-30T22:40:57.941641 #3429]  INFO -- : Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.1ms)
+I, [2015-04-30T22:40:58.142399 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.145286 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.146925 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.148432 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.151183 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.152235 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.153424 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.154905 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.156056 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.157408 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.231330 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.239068 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.338068 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.374024 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.415246 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.516682 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.555630 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.566251 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.612713 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.654286 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:40:58.680244 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:40:58 +0700
+I, [2015-04-30T22:41:02.650874 #3429]  INFO -- : Started GET "/carts/new" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.652770 #3429]  INFO -- : Processing by CartsController#new as HTML
+I, [2015-04-30T22:41:02.767131 #3429]  INFO -- :   Rendered carts/new.html.erb within layouts/public (4.8ms)
+I, [2015-04-30T22:41:02.771374 #3429]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (2.1ms)
+I, [2015-04-30T22:41:02.772005 #3429]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.4ms)
+I, [2015-04-30T22:41:02.776320 #3429]  INFO -- :   Rendered layouts/_menu.html.erb (4.1ms)
+I, [2015-04-30T22:41:02.777565 #3429]  INFO -- :   Rendered layouts/_widgets.html.erb (1.1ms)
+I, [2015-04-30T22:41:02.777713 #3429]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-04-30T22:41:02.777957 #3429]  INFO -- : Completed 200 OK in 125ms (Views: 122.9ms | ActiveRecord: 0.8ms)
+I, [2015-04-30T22:41:02.834915 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.836279 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.840268 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.841627 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.842751 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.843980 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.845096 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.846813 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.848374 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.854132 #3429]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.981168 #3429]  INFO -- : Started GET "/uploads/product_image/image//beach.jpg" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+F, [2015-04-30T22:41:02.982650 #3429] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/uploads/product_image/image/beach.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn_rails:209:in `<top (required)>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-04-30T22:41:02.991747 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:02.994093 #3429]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-04-30 22:41:02 +0700
+I, [2015-04-30T22:41:03.004701 #3429]  INFO -- : Started GET "/carts/slide0.jpg" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+F, [2015-04-30T22:41:03.064768 #3429] FATAL -- : 
+AbstractController::ActionNotFound (The action 'show' could not be found for CartsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn_rails:209:in `<top (required)>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-04-30T22:41:03.065918 #3429]  INFO -- : Started GET "/carts/slide1.jpg" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+F, [2015-04-30T22:41:03.070111 #3429] FATAL -- : 
+AbstractController::ActionNotFound (The action 'show' could not be found for CartsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn_rails:209:in `<top (required)>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-04-30T22:41:03.071078 #3429]  INFO -- : Started GET "/carts/slide2.jpg" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+F, [2015-04-30T22:41:03.074083 #3429] FATAL -- : 
+AbstractController::ActionNotFound (The action 'show' could not be found for CartsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn_rails:209:in `<top (required)>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-04-30T22:41:03.091602 #3429]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.151174 #3429]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.206868 #3429]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.215480 #3429]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.260946 #3429]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.289710 #3429]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.302003 #3429]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.334549 #3429]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.415919 #3429]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+I, [2015-04-30T22:41:03.504528 #3429]  INFO -- : Started GET "/carts/slide0.jpg" for 127.0.0.1 at 2015-04-30 22:41:03 +0700
+F, [2015-04-30T22:41:03.507142 #3429] FATAL -- : 
+AbstractController::ActionNotFound (The action 'show' could not be found for CartsController):
+  actionpack (4.2.0) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:177:in `call!'
+  omniauth (1.1.0) lib/omniauth/strategy.rb:157:in `call'
+  omniauth (1.1.0) lib/omniauth/builder.rb:48:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn_rails:209:in `<top (required)>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
+  /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-04-30T22:41:22.053631 #3429]  INFO -- : Started GET "/carts/update_qty?utf8=%E2%9C%93&authenticity_token=0awtv3i7a4x%2By8e3Bq%2F3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES%2FU%2FIjwM%2FJtBr3rQ1A%3D%3D&2=9&id=2&total=9" for 127.0.0.1 at 2015-04-30 22:41:22 +0700
+I, [2015-04-30T22:41:22.054595 #3429]  INFO -- : Processing by CartsController#update_qty as */*
+I, [2015-04-30T22:41:22.054651 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"9", "id"=>"2", "total"=>"9"}
+I, [2015-04-30T22:41:22.156780 #3429]  INFO -- : Completed 200 OK in 102ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+I, [2015-04-30T22:41:23.646755 #3429]  INFO -- : Started GET "/carts/update_qty?utf8=%E2%9C%93&authenticity_token=0awtv3i7a4x%2By8e3Bq%2F3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES%2FU%2FIjwM%2FJtBr3rQ1A%3D%3D&2=9&id=2&total=9" for 127.0.0.1 at 2015-04-30 22:41:23 +0700
+I, [2015-04-30T22:41:23.647702 #3429]  INFO -- : Processing by CartsController#update_qty as */*
+I, [2015-04-30T22:41:23.647762 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"9", "id"=>"2", "total"=>"9"}
+I, [2015-04-30T22:41:23.649226 #3429]  INFO -- : Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+I, [2015-04-30T22:41:24.042491 #3429]  INFO -- : Started GET "/carts/update_qty?utf8=%E2%9C%93&authenticity_token=0awtv3i7a4x%2By8e3Bq%2F3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES%2FU%2FIjwM%2FJtBr3rQ1A%3D%3D&2=9&id=2&total=9" for 127.0.0.1 at 2015-04-30 22:41:24 +0700
+I, [2015-04-30T22:41:24.043964 #3429]  INFO -- : Processing by CartsController#update_qty as */*
+I, [2015-04-30T22:41:24.044076 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"9", "id"=>"2", "total"=>"9"}
+I, [2015-04-30T22:41:24.046064 #3429]  INFO -- : Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+I, [2015-04-30T22:41:28.979258 #3429]  INFO -- : Started GET "/carts/update_qty?utf8=%E2%9C%93&authenticity_token=0awtv3i7a4x%2By8e3Bq%2F3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES%2FU%2FIjwM%2FJtBr3rQ1A%3D%3D&2=1&id=2&total=9" for 127.0.0.1 at 2015-04-30 22:41:28 +0700
+I, [2015-04-30T22:41:28.980236 #3429]  INFO -- : Processing by CartsController#update_qty as */*
+I, [2015-04-30T22:41:28.980314 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"1", "id"=>"2", "total"=>"9"}
+I, [2015-04-30T22:41:28.981811 #3429]  INFO -- : Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+I, [2015-04-30T22:41:38.634882 #3429]  INFO -- : Started GET "/carts/update_qty?utf8=%E2%9C%93&authenticity_token=0awtv3i7a4x%2By8e3Bq%2F3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES%2FU%2FIjwM%2FJtBr3rQ1A%3D%3D&2=2&id=2&total=9" for 127.0.0.1 at 2015-04-30 22:41:38 +0700
+I, [2015-04-30T22:41:38.636159 #3429]  INFO -- : Processing by CartsController#update_qty as */*
+I, [2015-04-30T22:41:38.636251 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"2", "id"=>"2", "total"=>"9"}
+I, [2015-04-30T22:41:38.637455 #3429]  INFO -- : Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+I, [2015-04-30T22:41:40.969094 #3429]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2015-04-30 22:41:40 +0700
+I, [2015-04-30T22:41:40.970743 #3429]  INFO -- : Processing by OrdersController#create as HTML
+I, [2015-04-30T22:41:40.970802 #3429]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0awtv3i7a4x+y8e3Bq/3QBNVuB6UOxLBEBPzBlR8ewLhQzSMQS7Z4GKMPzVFAgnCT6sES/U/IjwM/JtBr3rQ1A==", "2"=>"2", "id"=>"2", "total"=>"9", "commit"=>"Payment"}
+I, [2015-04-30T22:41:41.223564 #3429]  INFO -- : Completed 500 Internal Server Error in 253ms
+F, [2015-04-30T22:41:41.224561 #3429] FATAL -- : 
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/orders_controller.rb:52:in `create'
+
+

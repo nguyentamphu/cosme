@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  layout '_form_public', only: [:new, :create, :edit]
+  layout '_form_public', only: [:new, :show, :create, :edit]
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts
@@ -19,12 +19,13 @@ class AccountsController < ApplicationController
 
   # GET /accounts/1/edit
   def edit
+    @btn_edit = "Edit"
   end
 
   # POST /accounts
   # POST /accounts.json
   def create
-    # binding.pry
+    binding.pry
     if params[:account][:role]=='admin'
       @check_role='admin'
     end
@@ -52,11 +53,9 @@ class AccountsController < ApplicationController
   # PATCH/PUT /accounts/1
   # PATCH/PUT /accounts/1.json
   def update
-    # render json: account_params
-    #   account_params.image = 'diep.jpg';
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+        format.html { redirect_to @account }
         format.json { render :show, status: :ok, location: @account }
       else
         format.html { render :edit }

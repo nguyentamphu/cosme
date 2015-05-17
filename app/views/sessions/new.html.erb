@@ -1,26 +1,107 @@
-<%= form_for(:account) do |f| %>
-<div class="containers">
+
+<%= form_for(@account) do |ac| %>
+
+<div class="container">
   <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
-      <div class="content" style="
-        box-shadow: 3px 1px 33px;
-        ">
-        <div class="panel panel-primary" style="
-          margin-top: 70px;margin-bottom: 150px;
-          ">
-          <div class="panel-heading text-default"><h1>Login</h1></div>
-          <div class="panel-body">
-            <%= f.label :email %><br>
-            <%= f.text_field :email, class: "form-control", placeholder:"Enter your email" %><br>
-            <%= f.label :password %><br>
-            <%= f.password_field :password,class: "form-control", placeholder:"Enter your password" %><br>
-            <div class="pull-right"><%= f.submit :Login, class:"btn btn-primary" %></div>
-          </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="content">
+          <div class="panel panel-success">
+            <div class="panel-heading text-default"><h1>Sign up</h1></div>
+            <div class="panel-body">
+                <fieldset>
+                  <div class="control-group">
+                    <!-- Email -->
+                    <label class="control-label" for="username">Email</label>
+                    <div class="controls">
+                      <%= ac.email_field :email, class: "form-control", placeholder: "Input email" %>
+                      <p class="help-block">Email can contain any letters or numbers, without spaces</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Password -->
+                    <label class="control-label" for="email">Password</label>
+                    <div class="controls">
+                      <%= ac.password_field :password, class: "form-control", placeholder: "Input Password" %>
+                      <p class="help-block">Please provide your Password should be at least 4 characters</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Fullname-->
+                    <label class="control-label" for="password">Fullname</label>
+                    <div class="controls">
+                      <%= ac.text_field :full_name, class: "form-control", placeholder: "Input Fullname" %>
+                      <p class="help-block">Fullname can contain any letters</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Phone number -->
+                    <label class="control-label"  for="password_confirm">Phone number</label>
+                    <div class="controls">
+                      <%= ac.text_field :tel, class: "form-control", placeholder: "Input Phone number" %>
+                      <p class="help-block">Phone number can contain only numbers bettwen 0 to 9</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Day of birth -->
+                    <label class="control-label"  for="password_confirm">Day of birth</label>
+                    <div class="controls">
+                      <%= ac.date_select :birthday, :use_short_month=>true, :start_year=> 1950, :end_year=> Time.now.year,
+                        :date_separator=>'/ ', class: "form-control" %>
+                      <p class="help-block">Select date</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Address -->
+                    <label class="control-label"  for="password_confirm">Address</label>
+                    <div class="controls">
+                      <%= ac.text_field :address, class: "form-control" %>
+                      <p class="help-block">Address can contain any letters or numbers</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Gender -->
+                    <label class="control-label"  for="password_confirm">Gender</label><br>
+                    <div class="controls">
+                      <label class="control-label"  for="password_confirm">Male</label>
+                      <%= ac.radio_button :gender, '1', {:checked => true} %>
+                      <label class="control-label"  for="password_confirm">Female</label>
+                      <%= ac.radio_button :gender, '0' %>
+                      <p class="help-block">Select gender</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Image -->
+                    <label class="control-label"  for="password_confirm">Image Profile</label>
+                    <div class="controls">
+                      <%= ac.file_field :image, id: "select_image", class: "form-control" %>
+                      <p class="help-block">Select image profile</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls pull-right">
+                      <%= link_to "Cancel", root_path, class: "btn btn-danger" %>
+                      <%= ac.submit "Register", class:"btn btn-success" %>
+                    </div>
+                  </div>
+                </fieldset>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
-    <div class="col-sm-3"></div>
   </div>
 </div>
-<% end %>
+
+<% end -%>

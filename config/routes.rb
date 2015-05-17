@@ -3,30 +3,38 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root to:"products#index"
+  root to: 'products#index'
 
-  resources :products do 
-    get 'categories_list'=>:categories_list
+  resources :products do
+    get 'categories_list' => :categories_list
   end
-  controller :products do 
-      get 'search'=>:search
+
+  controller :products do
+    get 'search' => :search
   end
-  resources :carts do 
+
+  resources :carts do
     collection do
-      get "update_qty"
+      get 'update_qty'
     end
-  end 
-  resources :orders 
-  resources :accounts
+  end
+
+  resources :orders
+
+  resources :accounts do
+    collection do
+      get '' => 'products#index'
+    end
+  end
+
   controller :sessions do
-    get 'login'=>:new
-    post 'login'=>:create
-    delete 'logout'=>:destroy
+    get    'login' => :new
+    post   'login' => :create
+    delete 'logout'=> :destroy
   end
 
   resources :ratings
   resources :advs
-
 
   # resources :examples
   # The priority is based upon order of creation: first created -> highest priority.

@@ -3,12 +3,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # binding.pry
-    account = Account.find_by(email: params[:email], password: params[:password])
-    # render json: account
-    if account.present?
-      session[:id] = account[:id]
-      session[:email]= account[:email]
+    @account = Account.find_by(email: params[:email], password: params[:password])
+    if @account.present?
+      session[:id] = @account[:id]
+      session[:user]= @account[:full_name]
       redirect_to products_path
     else
       redirect_to products_path, alert: 'invalid username or password'
@@ -17,8 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:id]=nil
-    session[:email]=nil
-    # render json: session[:id]
+    session[:user]=nil
     redirect_to products_path
   end
 end
