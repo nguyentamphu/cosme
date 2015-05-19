@@ -25,7 +25,7 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.json
   def create
-    binding.pry
+    # binding.pry
     if params[:account][:role]=='admin'
       @check_role='admin'
     end

@@ -24991,3 +24991,112 @@ NoMethodError (undefined method `[]' for nil:NilClass):
   app/controllers/orders_controller.rb:52:in `create'
 
 
+I, [2015-05-17T23:32:22.516793 #4715]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-05-17 23:32:22 +0700
+I, [2015-05-17T23:32:22.529545 #4715]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-05-17T23:32:22.561229 #4715]  INFO -- :   Rendered products/_products.html.erb (19.2ms)
+I, [2015-05-17T23:32:22.561342 #4715]  INFO -- :   Rendered products/index.html.erb within layouts/public (20.0ms)
+I, [2015-05-17T23:32:22.785266 #4715]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (1.9ms)
+I, [2015-05-17T23:32:22.788234 #4715]  INFO -- :   Rendered layouts/_search_logo.html.erb (2.5ms)
+I, [2015-05-17T23:32:22.798159 #4715]  INFO -- :   Rendered layouts/_menu.html.erb (9.4ms)
+I, [2015-05-17T23:32:22.803745 #4715]  INFO -- :   Rendered layouts/_widgets.html.erb (5.1ms)
+I, [2015-05-17T23:32:22.804479 #4715]  INFO -- :   Rendered layouts/_footer.html.erb (0.3ms)
+I, [2015-05-17T23:32:22.804731 #4715]  INFO -- : Completed 200 OK in 275ms (Views: 263.1ms | ActiveRecord: 3.7ms)
+I, [2015-05-17T23:32:23.068087 #4715]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.076752 #4715]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.085043 #4715]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.094455 #4715]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.100214 #4715]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.108152 #4715]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.151850 #4715]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.154886 #4715]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.157134 #4715]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.159324 #4715]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:23.386518 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:23 +0700
+I, [2015-05-17T23:32:24.875299 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:24 +0700
+I, [2015-05-17T23:32:27.159507 #4715]  INFO -- : Started GET "/products/5/categories_list" for 127.0.0.1 at 2015-05-17 23:32:27 +0700
+I, [2015-05-17T23:32:27.160658 #4715]  INFO -- : Processing by ProductsController#categories_list as HTML
+I, [2015-05-17T23:32:27.160732 #4715]  INFO -- :   Parameters: {"product_id"=>"5"}
+I, [2015-05-17T23:32:27.167626 #4715]  INFO -- :   Rendered products/_products.html.erb (4.8ms)
+I, [2015-05-17T23:32:27.167770 #4715]  INFO -- :   Rendered products/index.html.erb within layouts/product (5.0ms)
+I, [2015-05-17T23:32:27.170270 #4715]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (0.8ms)
+I, [2015-05-17T23:32:27.170597 #4715]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.2ms)
+I, [2015-05-17T23:32:27.173099 #4715]  INFO -- :   Rendered layouts/_widgets.html.erb (1.0ms)
+I, [2015-05-17T23:32:27.173246 #4715]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-05-17T23:32:27.173415 #4715]  INFO -- : Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+I, [2015-05-17T23:32:27.472655 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:27 +0700
+I, [2015-05-17T23:32:28.777859 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:28 +0700
+I, [2015-05-17T23:32:34.291111 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:34 +0700
+I, [2015-05-17T23:32:37.808494 #4715]  INFO -- : Started GET "/products/7/categories_list" for 127.0.0.1 at 2015-05-17 23:32:37 +0700
+I, [2015-05-17T23:32:37.810030 #4715]  INFO -- : Processing by ProductsController#categories_list as HTML
+I, [2015-05-17T23:32:37.810217 #4715]  INFO -- :   Parameters: {"product_id"=>"7"}
+I, [2015-05-17T23:32:37.816161 #4715]  INFO -- :   Rendered products/_products.html.erb (3.7ms)
+I, [2015-05-17T23:32:37.816389 #4715]  INFO -- :   Rendered products/index.html.erb within layouts/product (4.1ms)
+I, [2015-05-17T23:32:37.829422 #4715]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (1.1ms)
+I, [2015-05-17T23:32:37.829988 #4715]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.4ms)
+I, [2015-05-17T23:32:37.833756 #4715]  INFO -- :   Rendered layouts/_widgets.html.erb (1.5ms)
+I, [2015-05-17T23:32:37.834995 #4715]  INFO -- :   Rendered layouts/_footer.html.erb (1.0ms)
+I, [2015-05-17T23:32:37.835226 #4715]  INFO -- : Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.6ms)
+I, [2015-05-17T23:32:38.143359 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:38 +0700
+I, [2015-05-17T23:32:39.394329 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:39 +0700
+I, [2015-05-17T23:32:41.822002 #4715]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:32:41 +0700
+I, [2015-05-17T23:33:36.325108 #4766]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.353322 #4766]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-05-17T23:33:36.403306 #4766]  INFO -- :   Rendered products/_products.html.erb (29.1ms)
+I, [2015-05-17T23:33:36.403423 #4766]  INFO -- :   Rendered products/index.html.erb within layouts/public (30.8ms)
+I, [2015-05-17T23:33:36.436683 #4766]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (2.3ms)
+I, [2015-05-17T23:33:36.437958 #4766]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.9ms)
+I, [2015-05-17T23:33:36.449598 #4766]  INFO -- :   Rendered layouts/_menu.html.erb (11.0ms)
+I, [2015-05-17T23:33:36.456308 #4766]  INFO -- :   Rendered layouts/_widgets.html.erb (6.2ms)
+I, [2015-05-17T23:33:36.457079 #4766]  INFO -- :   Rendered layouts/_footer.html.erb (0.3ms)
+I, [2015-05-17T23:33:36.457542 #4766]  INFO -- : Completed 200 OK in 104ms (Views: 85.6ms | ActiveRecord: 4.3ms)
+I, [2015-05-17T23:33:36.599651 #4766]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.606214 #4766]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.611178 #4766]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.620255 #4766]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.623269 #4766]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.627209 #4766]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.628902 #4766]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.631056 #4766]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.632798 #4766]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.633776 #4766]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.893246 #4766]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:36.908726 #4766]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:33:36 +0700
+I, [2015-05-17T23:33:37.047534 #4766]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.122336 #4766]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.138993 #4766]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.298700 #4766]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.464952 #4766]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.631685 #4766]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:37.999747 #4766]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-05-17 23:33:37 +0700
+I, [2015-05-17T23:33:38.187424 #4766]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-05-17 23:33:38 +0700
+I, [2015-05-17T23:33:38.271201 #4766]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-17 23:33:38 +0700
+I, [2015-05-18T08:38:44.593465 #4532]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-05-18 08:38:44 +0700
+I, [2015-05-18T08:38:44.638070 #4532]  INFO -- : Processing by ProductsController#index as HTML
+I, [2015-05-18T08:38:45.131283 #4532]  INFO -- :   Rendered products/_products.html.erb (321.6ms)
+I, [2015-05-18T08:38:45.131386 #4532]  INFO -- :   Rendered products/index.html.erb within layouts/public (349.5ms)
+I, [2015-05-18T08:38:45.573394 #4532]  INFO -- :   Rendered layouts/_top_heading_bar.html.erb (2.1ms)
+I, [2015-05-18T08:38:45.574645 #4532]  INFO -- :   Rendered layouts/_search_logo.html.erb (0.8ms)
+I, [2015-05-18T08:38:45.600031 #4532]  INFO -- :   Rendered layouts/_menu.html.erb (11.2ms)
+I, [2015-05-18T08:38:45.717241 #4532]  INFO -- :   Rendered layouts/_widgets.html.erb (116.3ms)
+I, [2015-05-18T08:38:45.729617 #4532]  INFO -- :   Rendered layouts/_footer.html.erb (0.6ms)
+I, [2015-05-18T08:38:45.730029 #4532]  INFO -- : Completed 200 OK in 1092ms (Views: 1079.0ms | ActiveRecord: 4.3ms)
+I, [2015-05-18T08:38:46.082670 #4532]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.089598 #4532]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.093018 #4532]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.094195 #4532]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.097745 #4532]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.099857 #4532]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.100838 #4532]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.101763 #4532]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.102819 #4532]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.103800 #4532]  INFO -- : Started GET "/assets/application-208916be42cfef157854a972e0007afb.js" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.635093 #4532]  INFO -- : Started GET "/assets/application-d0679c35750164760ed26d9a237ac293.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.659137 #4532]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:46.954578 #4532]  INFO -- : Started GET "/assets/custom-82202baede6b15b77add2ba0a8db4884.css" for 127.0.0.1 at 2015-05-18 08:38:46 +0700
+I, [2015-05-18T08:38:47.036855 #4532]  INFO -- : Started GET "/assets/iview-f3922307c0717723f39ac2d4516b67d7.css" for 127.0.0.1 at 2015-05-18 08:38:47 +0700
+I, [2015-05-18T08:38:47.270909 #4532]  INFO -- : Started GET "/assets/style-switch-342190c2e542abb18bb0291921223450.css" for 127.0.0.1 at 2015-05-18 08:38:47 +0700
+I, [2015-05-18T08:38:47.386875 #4532]  INFO -- : Started GET "/assets/menu3d-c64e86ac14db37a25279f720014294e2.css" for 127.0.0.1 at 2015-05-18 08:38:47 +0700
+I, [2015-05-18T08:38:47.595821 #4532]  INFO -- : Started GET "/assets/normalize-64830c08d754c48e941fb73ff706b860.css" for 127.0.0.1 at 2015-05-18 08:38:47 +0700
+I, [2015-05-18T08:38:47.806346 #4532]  INFO -- : Started GET "/assets/animate-f037daa59017fed5ec3081f456b7ec3d.css" for 127.0.0.1 at 2015-05-18 08:38:47 +0700
+I, [2015-05-18T08:38:48.109674 #4532]  INFO -- : Started GET "/assets/color-e78cb4b95ee478b8532eb1fae4333237.css" for 127.0.0.1 at 2015-05-18 08:38:48 +0700
+I, [2015-05-18T08:38:48.365768 #4532]  INFO -- : Started GET "/assets/font-awesome-3b47a27be61f5302e2f74caf37248dc9.css" for 127.0.0.1 at 2015-05-18 08:38:48 +0700

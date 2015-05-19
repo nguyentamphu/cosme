@@ -6,8 +6,8 @@
 #app2 
 root = "/home/xv/cosme"
 working_directory root
-pid "#{root}/tmp/pids/unicorn-app2.pid"
-listen "/tmp/unicorn.app2.sock"
+pid "#{root}/tmp/pids/unicorn-cosme.pid"
+listen "/tmp/unicorn.cosme.sock"
 # This loads the application in the master process before forking
 # worker processes
 # Read more about it here:

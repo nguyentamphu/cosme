@@ -48,8 +48,9 @@ class OrdersController < ApplicationController
         product.quantity = (product.quantity - s[1]["qty"].to_i)
         product.save
       end
-      acc = Account.where(id: session[:id])
-      SendMailer.send_email(session[:email], acc[0]["full_name"], session[:cart]).deliver
+      acc = Account.find(session[:id])
+      # binding.pry
+      SendMailer.send_email(acc.email, acc.full_name, session[:cart]).deliver
     end
     session[:cart] = nil
     redirect_to products_url

@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   layout :products_layout
 
   def index
-    @products = Product.search(params[:search]).group('products.id').page(params[:page]).per_page(8)
+    @products = Product.search(params[:search]).group('products.id').page(params[:page]).per_page(12)
     @articles = Article.all.where(is_delete: 0)
     # binding.pry
   end

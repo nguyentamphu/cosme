@@ -8,7 +8,7 @@
             <!-- end: Menu Item --> 
             <!-- Menu Item for Tablets and Computers Only-->
             <% @medium_categories.each do |big| %>
-            <li><%= link_to "<i class='fa fa-bars'></i><span>#{big.name}</span> <i class='fa fa-angle-right'></i>".html_safe, product_categories_list_path(big.id), id:'big_categories_menu' %>
+            <li><%= link_to "<i class='fa fa-bars'></i><span>#{big.name}</span>".html_safe, product_categories_list_path(big.id), id:'big_categories_menu' %>
             </li>
             <% end %>
             <!-- end: Menu Item -->
