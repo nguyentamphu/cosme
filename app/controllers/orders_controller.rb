@@ -1,9 +1,10 @@
 class OrdersController < ApplicationController
-  layout 'public'
+  layout '_form_public', only: [:new, :show, :create, :edit]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :check_session, only: [:create]
   #Check Session is user login and require user login before use action
   def check_session
-    if session[:id].blank? || session[:id]==nil
+    if session[:id].blank? || session[:id].nil?
       redirect_to  new_cart_path , notice: "Please login to Continue payment!!!!"
     end
   end

@@ -1,130 +1,275 @@
-
-
 <style type="text/css">
-.form-control {
-background-color: #DFF0D8;
+
+.fa {
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
-td {
-padding-left: 20px !important;
+  .logoimage {
+  width: 70px;
+  height: 70px;
+  float: left;
+  background: #00aff0;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
-#notice {
-  color: red;
+.logoimage i {
+  font-size: 25px;
+  padding-top: 22px;
 }
-input { 
-  height: 13px;
+.logotext {
+  float: left;
+  color: #444444;
+  font-size: 19px;
+  padding: 22px 0 0 10px;
+  line-height: 10px;
 }
-img {
-  width: 50%;
-  height: 50%;
+.slogan {
+  padding-left: 10px;
+  color: #e65a4b;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 11px;
+}
+
+/*------------------------------------*\
+   Logo
+\*------------------------------------*/
+
+.logo {
+  float: left;
+  width: 235px;
+  display: table;
+}
+
+    footer {
+  background-color: #333333;
+  color: #aaaaaa;
+  font-size: 12px;
+  padding: 20px 0 0 0;
+}
+
+footer .copyrights {
+  background-color: #222222;
+  border-top: 1px #444444 solid;
+  padding-top: 14px;
+}
+footer .copyrights .copytxt {
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 </style>
-<%= form_for(@account) do |f| %>
-<% if @account.errors.any? %>
-<div id="error_explanation">
-  <ul>
-    <% @account.errors.full_messages.each do |message| %>
-    <li style="color: red"><%= message %></li>
-    <% end %>
-  </ul>
+
+<hr>
+
+<%= form_for(@account) do |ac| %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="content">
+          <div class="panel panel-success">
+          <% if params[:action] == 'new' %>
+            <div class="panel-heading text-default"><h1>Sign up</h1></div>
+            <% else %>
+            <div class="panel-heading text-default"><h1>Edit profile</h1></div>
+          <% end -%>
+            <div class="panel-body">
+
+                <p><div class="pull-right"><i>(*) fields are reqiure</i></div></p><br>
+                <fieldset>
+                  <div class="control-group">
+                    <!-- Email -->
+                    <label class="control-label" for="username">Email*</label>
+                    <div class="controls">
+                      <% if params[:action] == 'new' %>
+                        <%= ac.email_field :email, class: "form-control", placeholder: "Input email" %>
+                      <% else %>
+                        <%= ac.email_field :email, class: "form-control", placeholder: "Input email", :disabled => true %>
+                      <% end -%>
+                      <p class="help-block">Email can contain any letters or numbers, without spaces</p>
+                    </div>
+                    
+                    <% if @account.errors[:email] %> 
+                      <div id="error_explanation">
+                        <ul>
+                          <% @account.errors[:email].each do |message| %>
+                          <li style="color: red"><%= message %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+                    <p>
+                      <% if notice%>
+                      <i class="fa fa-warning" aria-hidden="true" id="notice" style="color: red"><%= notice %></i>
+                      <%end%>
+                    </p>
+                  </div>
+
+                  <% if params[:action] == 'new' %>
+                    <div class="control-group">
+                      <!-- Password -->
+                      <label class="control-label" for="email">Password*</label>
+                      <div class="controls">
+                        <%= ac.password_field :password, class: "form-control", placeholder: "Input Password" %>
+                        <p class="help-block">Please provide your Password should be at least 4 characters</p>
+                      </div>
+
+                      <% if @account.errors[:password] %> 
+                        <div id="error_explanation">
+                          <ul>
+                            <% @account.errors[:password].each do |message| %>
+                            <li style="color: red"><%= message %></li>
+                            <% end %>
+                          </ul>
+                        </div>
+                      <% end %>
+                    </div>
+
+                    <div class="control-group">
+                      <!-- Password confirm-->
+                      <label class="control-label" for="email">Password confirm*</label>
+                      <div class="controls">
+                        <%= ac.password_field :password_confirm, class: "form-control", 
+                            placeholder: "Input Password confirm" %>
+                        <p class="help-block">Please confirm your Password</p>
+                      </div>
+
+                      <p>
+                      <% if @msg_confirm %>
+                        <i class="fa fa-warning" aria-hidden="true" id="notice" style="color: red"><%= @msg_confirm %></i>
+                        <%end%>
+                        </p>
+                    </div>
+                  <% end -%>
+
+                  <div class="control-group">
+                    <!-- Fullname-->
+                    <label class="control-label" for="password">Fullname*</label>
+                    <div class="controls">
+                      <%= ac.text_field :full_name, class: "form-control", placeholder: "Input Fullname" %>
+                      <p class="help-block">Fullname can contain any letters</p>
+                    </div>
+
+
+                    <% if @account.errors[:full_name] %> 
+                      <div id="error_explanation">
+                        <ul>
+                          <% @account.errors[:full_name].each do |message| %>
+                          <li style="color: red"><%= message %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Phone number -->
+                    <label class="control-label"  for="password_confirm">Phone number</label>
+                    <div class="controls">
+                      <%= ac.text_field :tel, class: "form-control", placeholder: "Input Phone number" %>
+                      <p class="help-block">Phone number can contain only numbers bettwen 0 to 9</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Day of birth -->
+                    <label class="control-label"  for="password_confirm">Day of birth</label>
+                    <div class="controls">
+                      <%= ac.date_select :birthday, :use_short_month=>true, :start_year=> 1950, :end_year=> Time.now.year,
+                        :date_separator=>'/ ', class: "form-control" %>
+                      <p class="help-block">Select date</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Address -->
+                    <label class="control-label"  for="password_confirm">Address</label>
+                    <div class="controls">
+                      <%= ac.text_field :address, class: "form-control" %>
+                      <p class="help-block">Address can contain any letters or numbers</p>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Gender -->
+                    <label class="control-label"  for="password_confirm">Gender</label><br>
+                    <div class="controls">
+                      <label class="control-label"  for="password_confirm">Male</label>
+                      <%= ac.radio_button :gender, '1', {:checked => true} %>
+                      <label class="control-label"  for="password_confirm">Female</label>
+                      <%= ac.radio_button :gender, '0' %>
+                      <p class="help-block">Select gender</p>
+                    </div>
+                  </div>
+
+                    <div class="control-group">
+                    <!-- Image -->
+                      <label class="control-label"  for="password_confirm">Image Profile</label>
+                      <div class="controls">
+                        <%= ac.file_field :image, id: "select_image", class: "form-control", :onchange => "loadFile(event)" %>
+                       <p class="help-block">Select image profile</p>
+                        <% if params[:action] == 'edit' %>
+                          <%= image_tag @account.image, class: "img-thumbnail", size: '240x150', :id => 'show_select_image', alt: "" %>
+                        <% else %>
+                          <%= image_tag( '', :id => 'show_select_image') %>
+                        <% end -%>
+                      </div>
+                        <script>
+                          var loadFile = function(event) {
+                            var output = document.getElementById('show_select_image');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                            output.width=250;
+                            output.height=150;
+                          };
+                        </script>
+                  </div>
+
+                  <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls pull-right">
+                      <%= link_to "Cancel", root_path, class: "btn btn-danger" %>
+
+                       <% if params[:action] == 'new' %>
+                        <%= ac.submit "Register", class:"btn btn-success" %>
+                      <% else %>
+                        <%= ac.submit "Update", class:"btn btn-success" %>
+                      <% end -%>
+                    </div>
+                  </div>
+                </fieldset>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<% end %>
-<div class="col-sm-8">
-  <table width="100%">
-    <tr>
-      <td>
-        <div class="form-group">
-          <%= f.label :Email %><br>
-          <%= f.email_field :email, placeholder:"Input your email", required: true, class: "form-control"%>
-          <div>
-            <% if notice%>
-            <i class="fa fa-warning" aria-hidden="true" id="notice"><%= notice %></i>
-            <%end%>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="form-group">
-          <%= f.label :Phone %><br>
-          <%= f.telephone_field :tel, placeholder:"Input your phone number" , required: true, class: "form-control"%>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="form-group">
-          <%= f.label :Password %><br>
-          <%= f.password_field :password, placeholder:"Input your password", required: true, class: "form-control" %>
-        </div>
-      </td>
-      
-      <td>
-        <div class="form-group">
-          <%= f.label :Birthday %><br>
-          <%= f.date_select :birthday, :use_short_month=>true, :start_year=> 1950, :end_year=> Time.now.year,
-          :date_separator=>'/ ', class: "form-control" %>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      
-      <tr>
-        <td>
-          <div class="form-group">
-            <%= f.label :Fullname %><br>
-            <%= f.text_field :full_name, placeholder:"Input your fullname" , required: true, class: "form-control"%>
-          </div>
-        </td>
-        <td>
-          <div class="form-group">
-            <%= f.label :Address %><br>
-            <%= f.text_field :address , placeholder:"Your address" , required: true, class: "form-control"%>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="col-sm-4">
-    <div class="form-group" >
-      <%= f.label :Gender %><br>
-      <%= f.label :Male %>  
-      <%= f.radio_button :gender, '1', {:checked => true} %>
-      <%= f.label :Female %>
-      <%= f.radio_button :gender, '0' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :Avatar %>
-      <%= f.file_field :image, id: "select_image", class: "form-control" %>
-      <% if @account.image? %>
-        <%= image_tag @account.image, class: "img-thumbnail", :id => 'show_select_image'%>
-      <% else %>
-        <div id='show_selection'></div>
-      <% end -%>
-    </div>
-    <div class="pull-right">
-      <%= link_to "Cancel", root_path, class: "btn btn-danger", style: "height: 48px; padding-top: 14px" %>
-      <% if @btn_edit %>
-        <%= f.submit "Update", class:"btn btn-primary", style: "height: 48px" %>
-      <% else %>
-        <%= f.submit "Sign up", class:"btn btn-primary", style: "height: 48px" %>
-      <% end -%>
-    </div>
-    <% end %>
-  </div>
+
+<% end -%>
 
   <!-- JS -->
 <script type="text/javascript">
 function readURL(input) {
-if (input.files && input.files[0]) {
-var reader = new FileReader();
-reader.onload = function (e) {
-$('#show_selection').html("<img id='show_select_image', class='img-thumbnail'/>")
-$('#show_select_image').attr('src', e.target.result);
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#show_select_image').attr('src', e.target.result);
+            $('#show_select_image').attr('width', '250').attr('height','140');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
 }
-reader.readAsDataURL(input.files[0]);
-}
-}
-$("#select_image").change(function(){
-readURL(this);
-});
+// $("#select_image").change(function(){
+//     readURL(this);
+// });
+
 </script>

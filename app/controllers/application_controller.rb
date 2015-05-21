@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
     @slide    = Slider.all
     @articles = Article.all
   end
+
+  def check_session
+    if session[:id].blank? || session[:user_id]==nil
+      redirect_to  products_path
+    end
+  end
 end

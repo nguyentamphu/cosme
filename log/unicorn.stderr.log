@@ -297,3 +297,19 @@ I, [2015-05-18T08:37:31.931559 #4481]  INFO -- : worker=0 ready
 D, [2015-05-18T09:10:57.463233 #4477] DEBUG -- : waiting 16.0s after suspend/hibernation
 I, [2015-05-18T09:54:28.519729 #4477]  INFO -- : reaped #<Process::Status: pid 4481 exit 0> worker=0
 I, [2015-05-18T09:54:28.519857 #4477]  INFO -- : master complete
+I, [2015-05-20T10:51:40.083012 #20974]  INFO -- : Refreshing Gem list
+I, [2015-05-20T10:51:46.972464 #20974]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-20T10:51:48.028191 #20974]  INFO -- : master process ready
+I, [2015-05-20T10:51:48.044874 #20986]  INFO -- : worker=0 ready
+I, [2015-05-20T10:56:11.783399 #20974]  INFO -- : reaped #<Process::Status: pid 20986 exit 0> worker=0
+I, [2015-05-20T10:56:11.783531 #20974]  INFO -- : master complete
+I, [2015-05-20T10:56:22.695000 #21362]  INFO -- : Refreshing Gem list
+I, [2015-05-20T10:56:24.409412 #21362]  INFO -- : unlinking existing socket=/tmp/unicorn.cosme.sock
+I, [2015-05-20T10:56:24.409548 #21362]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-20T10:56:25.419487 #21362]  INFO -- : master process ready
+I, [2015-05-20T10:56:25.426823 #21373]  INFO -- : worker=0 ready
+D, [2015-05-20T11:42:06.932307 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
+D, [2015-05-20T12:31:36.464704 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
+D, [2015-05-20T13:35:21.521296 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
+I, [2015-05-20T18:05:14.439079 #21362]  INFO -- : reaped #<Process::Status: pid 21373 exit 0> worker=0
+I, [2015-05-20T18:05:14.439405 #21362]  INFO -- : master complete

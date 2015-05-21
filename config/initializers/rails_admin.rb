@@ -154,7 +154,7 @@ RailsAdmin.config do |config|
     list do
       # For RailsAdmin >= 0.5.0
       fields :id, :full_name, :role, :email, :tel, :birthday, :address, :gender
-       exclude_fields :is_delete, :created_at, :updated_at, :image, :orders, :ratings, :comments
+       exclude_fields :is_delete, :created_at, :updated_at, :image, :orders, :ratings
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true
@@ -259,17 +259,6 @@ config.model Product do
     edit do
       include_all_fields
       field :detail, :ck_editor
-      exclude_fields :is_delete
-    end
-    list do
-      include_all_fields
-       exclude_fields :is_delete, :created_at, :updated_at
-    end
-  end
-
-  config.model Comment do
-    edit do
-      include_all_fields
       exclude_fields :is_delete
     end
     list do

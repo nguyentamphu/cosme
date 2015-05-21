@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  layout 'public'
+  layout 'product'
 
   def new
     if session[:cart] == nil

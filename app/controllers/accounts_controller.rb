@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   # GET /accounts
-  # GET /accounts.json
+  # GET /accounts.json 
   def index
   end
 
@@ -25,26 +25,28 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.json
   def create
-    # binding.pry
-    if params[:account][:role]=='admin'
-      @check_role='admin'
-    end
+          # return false
     @account = Account.new(account_params)
     accounts = Account.find_by(email: account_params[:email], is_delete: '0')
-    if accounts.present?
-      redirect_to new_account_path, notice:'E-mail existed!'
+
+    if params[:account][:password] != params[:account][:password_confirm]
+      @msg_confirm = 'Password does not match!'
+      render 'new'
     else
-      respond_to do |format|
-        @account.is_delete = '0'
-        if @account.save
-          @acc = Account.find_by(email: account_params[:email])
-          SendMailer.user_email(@acc).deliver
-          format.html { redirect_to root_path }
-          format.json { render :show, status: :created, location: @account }
-        else  
-          format.html { render :new }
-          format.json { render json: @account.errors, status: :unprocessable_entity }
-          binding.pry 
+      if accounts.present?
+        redirect_to new_account_path, notice:'E-mail does not exist!'
+      else
+        respond_to do |format|
+          @account.is_delete = '0'
+          if @account.save
+            @acc = Account.find_by(email: account_params[:email])
+            SendMailer.user_email(@acc).deliver
+            format.html { redirect_to root_path }
+            format.json { render :show, status: :created, location: @account }
+          else  
+            format.html { render :new }
+            format.json { render json: @account.errors, status: :unprocessable_entity }
+          end
         end
       end
     end
