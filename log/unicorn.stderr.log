@@ -1,315 +1,37 @@
-I, [2015-04-16T13:29:08.808127 #13699]  INFO -- : Refreshing Gem list
-DEPRECATION WARNING: The configuration option `config.serve_static_assets` has been renamed to `config.serve_static_files` to clarify its role (it merely enables serving everything in the `public` folder and is unrelated to the asset pipeline). The `serve_static_assets` alias will be removed in Rails 5.0. Please migrate your configuration files accordingly. (called from block in <top (required)> at /home/xv/cosme/config/environments/production.rb:23)
-/home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails/routes.rb:480:in `raise_no_secret_key': Devise.secret_key was not set. Please add the following to your Devise initializer: (RuntimeError)
-
-  config.secret_key = '4314b38d673740c1052cbaa9d75ee3ee18af9c5fdd29aaca430e929985e4e710cd727267282e57e3b16ff006e18355892335c612e9e09484fce6430e41187430'
-
-Please ensure you restarted your application after installing Devise or setting the key.
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails/routes.rb:209:in `devise_for'
-	from /home/xv/cosme/config/routes.rb:4:in `block in <top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `instance_exec'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `eval_block'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
-	from /home/xv/cosme/config/routes.rb:1:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application.rb:169:in `reload_routes!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails.rb:14:in `block in <class:Engine>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:36:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:44:in `each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/finisher.rb:55:in `block in <module:Finisher>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:226:in `block in tsort_each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:429:in `each_strongly_connected_component_from'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:347:in `block in each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `call'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:224:in `tsort_each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:203:in `tsort_each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
-	from /home/xv/cosme/config/environment.rb:5:in `<top (required)>'
-	from config.ru:4:in `require'
-	from config.ru:4:in `block in <main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
-	from config.ru:1:in `new'
-	from config.ru:1:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn.rb:48:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn.rb:48:in `block in builder'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:139:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:139:in `block in rails_builder'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:764:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:764:in `build_app!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:137:in `start'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-I, [2015-04-16T13:36:57.633107 #14250]  INFO -- : Refreshing Gem list
-DEPRECATION WARNING: The configuration option `config.serve_static_assets` has been renamed to `config.serve_static_files` to clarify its role (it merely enables serving everything in the `public` folder and is unrelated to the asset pipeline). The `serve_static_assets` alias will be removed in Rails 5.0. Please migrate your configuration files accordingly. (called from block in <top (required)> at /home/xv/cosme/config/environments/production.rb:23)
-/home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails/routes.rb:480:in `raise_no_secret_key': Devise.secret_key was not set. Please add the following to your Devise initializer: (RuntimeError)
-
-  config.secret_key = '2ab8915fccf4640fa390443c02712b93889921f93b8a55c80481b7c2492994d7ca3b83b7b00148abb37fa99e79ec4033708289ff02d6e41d4fa9c43a557cd93f'
-
-Please ensure you restarted your application after installing Devise or setting the key.
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails/routes.rb:209:in `devise_for'
-	from /home/xv/cosme/config/routes.rb:4:in `block in <top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `instance_exec'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `eval_block'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
-	from /home/xv/cosme/config/routes.rb:1:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application.rb:169:in `reload_routes!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/devise-3.4.1/lib/devise/rails.rb:14:in `block in <class:Engine>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:36:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:44:in `each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.0/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application/finisher.rb:55:in `block in <module:Finisher>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:226:in `block in tsort_each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:429:in `each_strongly_connected_component_from'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:347:in `block in each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `call'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:345:in `each_strongly_connected_component'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:224:in `tsort_each'
-	from /home/xv/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/tsort.rb:203:in `tsort_each'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
-	from /home/xv/cosme/config/environment.rb:5:in `<top (required)>'
-	from config.ru:4:in `require'
-	from config.ru:4:in `block in <main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
-	from config.ru:1:in `new'
-	from config.ru:1:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn.rb:48:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn.rb:48:in `block in builder'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:139:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:139:in `block in rails_builder'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:764:in `call'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:764:in `build_app!'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:137:in `start'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-I, [2015-04-16T14:32:00.317426 #16645]  INFO -- : Refreshing Gem list
-I, [2015-04-16T14:32:02.115256 #16645]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T14:32:02.115406 #16645]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T14:32:03.148309 #16653]  INFO -- : worker=0 ready
-I, [2015-04-16T14:32:04.126860 #16645]  INFO -- : master process ready
-I, [2015-04-16T14:32:04.130741 #16657]  INFO -- : worker=1 ready
-/home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:206:in `pid=': Already running on PID:16645 (or pid=/tmp/unicorn.pid is stale) (ArgumentError)
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:135:in `start'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-I, [2015-04-16T14:33:39.239419 #16645]  INFO -- : reaped #<Process::Status: pid 16653 exit 0> worker=0
-I, [2015-04-16T14:33:39.239505 #16645]  INFO -- : reaped #<Process::Status: pid 16657 exit 0> worker=1
-I, [2015-04-16T14:33:39.239576 #16645]  INFO -- : master complete
-I, [2015-04-16T14:33:42.648507 #16846]  INFO -- : Refreshing Gem list
-I, [2015-04-16T14:33:44.423084 #16846]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T14:33:44.423223 #16846]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T14:33:45.433694 #16852]  INFO -- : worker=0 ready
-I, [2015-04-16T14:33:46.433623 #16846]  INFO -- : master process ready
-I, [2015-04-16T14:33:46.438014 #16856]  INFO -- : worker=1 ready
-I, [2015-04-16T14:35:28.835355 #16846]  INFO -- : reaped #<Process::Status: pid 16852 exit 0> worker=0
-I, [2015-04-16T14:35:28.835513 #16846]  INFO -- : reaped #<Process::Status: pid 16856 exit 0> worker=1
-I, [2015-04-16T14:35:28.835629 #16846]  INFO -- : master complete
-I, [2015-04-16T14:35:31.183663 #17085]  INFO -- : Refreshing Gem list
-I, [2015-04-16T14:35:32.939380 #17085]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T14:35:32.939785 #17085]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T14:35:33.950305 #17093]  INFO -- : worker=0 ready
-I, [2015-04-16T14:35:34.952134 #17085]  INFO -- : master process ready
-I, [2015-04-16T14:35:34.956994 #17097]  INFO -- : worker=1 ready
-I, [2015-04-16T14:38:19.060658 #17085]  INFO -- : reaped #<Process::Status: pid 17093 exit 0> worker=0
-I, [2015-04-16T14:38:19.060744 #17085]  INFO -- : reaped #<Process::Status: pid 17097 exit 0> worker=1
-I, [2015-04-16T14:38:19.060809 #17085]  INFO -- : master complete
-I, [2015-04-16T14:38:20.746339 #17226]  INFO -- : Refreshing Gem list
-I, [2015-04-16T14:38:22.493992 #17226]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T14:38:22.494128 #17226]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T14:38:23.510769 #17234]  INFO -- : worker=0 ready
-I, [2015-04-16T14:38:24.509182 #17226]  INFO -- : master process ready
-I, [2015-04-16T14:38:24.517506 #17238]  INFO -- : worker=1 ready
-I, [2015-04-16T14:40:27.380256 #17226]  INFO -- : reaped #<Process::Status: pid 17234 exit 0> worker=0
-I, [2015-04-16T14:40:27.380417 #17226]  INFO -- : reaped #<Process::Status: pid 17238 exit 0> worker=1
-I, [2015-04-16T14:40:27.380612 #17226]  INFO -- : master complete
-I, [2015-04-16T14:40:30.271726 #17420]  INFO -- : Refreshing Gem list
-I, [2015-04-16T14:40:32.002832 #17420]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T14:40:32.003241 #17420]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T14:40:33.018839 #17426]  INFO -- : worker=0 ready
-I, [2015-04-16T14:40:34.014999 #17420]  INFO -- : master process ready
-I, [2015-04-16T14:40:34.017824 #17430]  INFO -- : worker=1 ready
-I, [2015-04-16T14:44:44.560298 #17420]  INFO -- : reaped #<Process::Status: pid 17426 exit 0> worker=0
-I, [2015-04-16T14:44:44.560385 #17420]  INFO -- : reaped #<Process::Status: pid 17430 exit 0> worker=1
-I, [2015-04-16T14:44:44.560445 #17420]  INFO -- : master complete
-I, [2015-04-16T15:16:48.383678 #19549]  INFO -- : Refreshing Gem list
-I, [2015-04-16T15:16:50.179617 #19549]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T15:16:50.179769 #19549]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T15:16:51.195868 #19555]  INFO -- : worker=0 ready
-I, [2015-04-16T15:16:52.193200 #19549]  INFO -- : master process ready
-I, [2015-04-16T15:16:52.196587 #19559]  INFO -- : worker=1 ready
-/home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:206:in `pid=': Already running on PID:19549 (or pid=/tmp/unicorn.pid is stale) (ArgumentError)
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:135:in `start'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-I, [2015-04-16T15:18:01.970449 #19549]  INFO -- : reaped #<Process::Status: pid 19555 exit 0> worker=0
-I, [2015-04-16T15:18:01.970539 #19549]  INFO -- : reaped #<Process::Status: pid 19559 exit 0> worker=1
-I, [2015-04-16T15:18:01.970601 #19549]  INFO -- : master complete
-I, [2015-04-16T15:18:03.922159 #19639]  INFO -- : Refreshing Gem list
-I, [2015-04-16T15:18:05.600447 #19639]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T15:18:05.600586 #19639]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T15:18:06.610454 #19645]  INFO -- : worker=0 ready
-I, [2015-04-16T15:18:07.613062 #19639]  INFO -- : master process ready
-I, [2015-04-16T15:18:07.620549 #19649]  INFO -- : worker=1 ready
-I, [2015-04-16T15:20:09.579944 #19639]  INFO -- : reaped #<Process::Status: pid 19645 exit 0> worker=0
-I, [2015-04-16T15:20:09.580039 #19639]  INFO -- : reaped #<Process::Status: pid 19649 exit 0> worker=1
-I, [2015-04-16T15:20:09.580102 #19639]  INFO -- : master complete
-I, [2015-04-16T15:39:43.112240 #20645]  INFO -- : Refreshing Gem list
-I, [2015-04-16T15:39:44.772496 #20645]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T15:39:44.772636 #20645]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T15:39:45.787927 #20651]  INFO -- : worker=0 ready
-I, [2015-04-16T15:39:46.784889 #20645]  INFO -- : master process ready
-I, [2015-04-16T15:39:46.787277 #20655]  INFO -- : worker=1 ready
-I, [2015-04-16T15:44:14.710750 #20645]  INFO -- : reaped #<Process::Status: pid 20651 exit 0> worker=0
-I, [2015-04-16T15:44:14.710844 #20645]  INFO -- : reaped #<Process::Status: pid 20655 exit 0> worker=1
-I, [2015-04-16T15:44:14.710903 #20645]  INFO -- : master complete
-I, [2015-04-16T15:51:58.953630 #20926]  INFO -- : Refreshing Gem list
-I, [2015-04-16T15:52:00.951116 #20926]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-16T15:52:00.951275 #20926]  INFO -- : listening on addr=/tmp/unicorn.sock fd=11
-I, [2015-04-16T15:52:01.961591 #20932]  INFO -- : worker=0 ready
-I, [2015-04-16T15:52:02.963472 #20926]  INFO -- : master process ready
-I, [2015-04-16T15:52:02.966773 #20936]  INFO -- : worker=1 ready
-I, [2015-04-16T17:05:21.318589 #20926]  INFO -- : reaped #<Process::Status: pid 20932 exit 0> worker=0
-I, [2015-04-16T17:05:21.318725 #20926]  INFO -- : reaped #<Process::Status: pid 20936 exit 0> worker=1
-I, [2015-04-16T17:05:21.318780 #20926]  INFO -- : master complete
-I, [2015-04-17T09:30:44.381932 #4695]  INFO -- : Refreshing Gem list
-I, [2015-04-17T09:30:51.741834 #4695]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T09:30:51.741976 #4695]  INFO -- : unlinking existing socket=/tmp/unicorn.sock
-I, [2015-04-17T09:30:51.742045 #4695]  INFO -- : listening on addr=/tmp/unicorn.sock fd=12
-I, [2015-04-17T09:30:52.786190 #4695]  INFO -- : master process ready
-I, [2015-04-17T09:30:52.891209 #4702]  INFO -- : worker=0 ready
-I, [2015-04-17T09:31:27.465746 #4695]  INFO -- : reaped #<Process::Status: pid 4702 exit 0> worker=0
-I, [2015-04-17T09:31:27.465885 #4695]  INFO -- : master complete
-I, [2015-04-17T09:50:18.422453 #5180]  INFO -- : Refreshing Gem list
-I, [2015-04-17T09:50:20.183077 #5180]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T09:50:20.183221 #5180]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T09:50:21.189754 #5180]  INFO -- : master process ready
-I, [2015-04-17T09:50:21.192870 #5193]  INFO -- : worker=0 ready
+I, [2015-05-22T07:07:39.865029 #11175]  INFO -- : Refreshing Gem list
+I, [2015-05-22T07:07:41.565043 #11175]  INFO -- : unlinking existing socket=/tmp/unicorn.cosme.sock
+I, [2015-05-22T07:07:41.565175 #11175]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-22T07:07:42.575229 #11175]  INFO -- : master process ready
+I, [2015-05-22T07:07:42.584148 #11187]  INFO -- : worker=0 ready
 /home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
-/home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:206:in `pid=': Already running on PID:5180 (or pid=/home/xv/cosme/tmp/pids/unicorn-app2.pid is stale) (ArgumentError)
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/lib/unicorn/http_server.rb:135:in `start'
-	from /home/xv/.rvm/gems/ruby-2.2.1/gems/unicorn-4.8.3/bin/unicorn_rails:209:in `<top (required)>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `load'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/unicorn_rails:23:in `<main>'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-	from /home/xv/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-I, [2015-04-17T10:45:11.913257 #5180]  INFO -- : reaped #<Process::Status: pid 5193 exit 0> worker=0
-I, [2015-04-17T10:45:11.913502 #5180]  INFO -- : master complete
-I, [2015-04-17T10:45:20.949235 #5901]  INFO -- : Refreshing Gem list
-I, [2015-04-17T10:45:22.720264 #5901]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T10:45:22.720402 #5901]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T10:45:23.729026 #5901]  INFO -- : master process ready
-I, [2015-04-17T10:45:23.735213 #5913]  INFO -- : worker=0 ready
-I, [2015-04-17T10:50:15.465424 #5901]  INFO -- : reaped #<Process::Status: pid 5913 exit 0> worker=0
-I, [2015-04-17T10:50:15.465553 #5901]  INFO -- : master complete
-I, [2015-04-17T10:50:19.161986 #6089]  INFO -- : Refreshing Gem list
-I, [2015-04-17T10:50:21.003420 #6089]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T10:50:21.003559 #6089]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T10:50:22.013308 #6089]  INFO -- : master process ready
-I, [2015-04-17T10:50:22.023828 #6101]  INFO -- : worker=0 ready
-/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
-D, [2015-04-17T11:56:47.437873 #6089] DEBUG -- : waiting 16.0s after suspend/hibernation
-I, [2015-04-17T13:39:44.815809 #11116]  INFO -- : Refreshing Gem list
-I, [2015-04-17T13:39:46.556896 #11116]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T13:39:46.557012 #11116]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T13:39:47.565613 #11116]  INFO -- : master process ready
-I, [2015-04-17T13:39:47.570759 #11120]  INFO -- : worker=0 ready
-/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
-I, [2015-04-17T14:47:07.123529 #11116]  INFO -- : reaped #<Process::Status: pid 11120 exit 0> worker=0
-I, [2015-04-17T14:47:07.123676 #11116]  INFO -- : master complete
-I, [2015-04-17T14:47:39.143769 #13031]  INFO -- : Refreshing Gem list
-I, [2015-04-17T14:47:40.968315 #13031]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T14:47:40.968441 #13031]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T14:47:41.978590 #13031]  INFO -- : master process ready
-I, [2015-04-17T14:47:41.986207 #13044]  INFO -- : worker=0 ready
-I, [2015-04-17T14:49:54.685442 #13031]  INFO -- : reaped #<Process::Status: pid 13044 exit 0> worker=0
-I, [2015-04-17T14:49:54.685582 #13031]  INFO -- : master complete
-I, [2015-04-17T14:50:00.685474 #13138]  INFO -- : Refreshing Gem list
-I, [2015-04-17T14:50:02.766556 #13138]  INFO -- : unlinking existing socket=/tmp/unicorn.app2.sock
-I, [2015-04-17T14:50:02.766711 #13138]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-17T14:50:03.773846 #13138]  INFO -- : master process ready
-I, [2015-04-17T14:50:03.777068 #13150]  INFO -- : worker=0 ready
-I, [2015-04-17T17:33:20.249210 #13138]  INFO -- : reaped #<Process::Status: pid 13150 exit 0> worker=0
-I, [2015-04-17T17:33:20.249319 #13138]  INFO -- : master complete
-I, [2015-04-29T16:58:06.130209 #10266]  INFO -- : Refreshing Gem list
-I, [2015-04-29T16:58:08.413364 #10266]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-29T16:58:09.481880 #10266]  INFO -- : master process ready
-I, [2015-04-29T16:58:09.587852 #10290]  INFO -- : worker=0 ready
-D, [2015-04-29T18:22:53.019398 #10266] DEBUG -- : waiting 16.0s after suspend/hibernation
-I, [2015-04-29T18:23:13.082545 #10266]  INFO -- : reaped #<Process::Status: pid 10290 exit 0> worker=0
-I, [2015-04-29T18:23:13.082657 #10266]  INFO -- : master complete
-I, [2015-04-30T22:35:42.254569 #3163]  INFO -- : Refreshing Gem list
-I, [2015-04-30T22:36:26.051911 #3163]  INFO -- : listening on addr=/tmp/unicorn.app2.sock fd=11
-I, [2015-04-30T22:36:27.120702 #3163]  INFO -- : master process ready
-I, [2015-04-30T22:36:27.130543 #3429]  INFO -- : worker=0 ready
-/home/xv/cosme/app/views/products/show.html.erb:105: warning: duplicated key at line 105 ignored: :min
-I, [2015-04-30T22:51:30.717187 #3163]  INFO -- : reaped #<Process::Status: pid 3429 exit 0> worker=0
-I, [2015-04-30T22:51:30.717331 #3163]  INFO -- : master complete
-I, [2015-05-18T08:37:22.310124 #4477]  INFO -- : Refreshing Gem list
-I, [2015-05-18T08:37:30.760695 #4477]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
-I, [2015-05-18T08:37:31.826520 #4477]  INFO -- : master process ready
-I, [2015-05-18T08:37:31.931559 #4481]  INFO -- : worker=0 ready
-D, [2015-05-18T09:10:57.463233 #4477] DEBUG -- : waiting 16.0s after suspend/hibernation
-I, [2015-05-18T09:54:28.519729 #4477]  INFO -- : reaped #<Process::Status: pid 4481 exit 0> worker=0
-I, [2015-05-18T09:54:28.519857 #4477]  INFO -- : master complete
-I, [2015-05-20T10:51:40.083012 #20974]  INFO -- : Refreshing Gem list
-I, [2015-05-20T10:51:46.972464 #20974]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
-I, [2015-05-20T10:51:48.028191 #20974]  INFO -- : master process ready
-I, [2015-05-20T10:51:48.044874 #20986]  INFO -- : worker=0 ready
-I, [2015-05-20T10:56:11.783399 #20974]  INFO -- : reaped #<Process::Status: pid 20986 exit 0> worker=0
-I, [2015-05-20T10:56:11.783531 #20974]  INFO -- : master complete
-I, [2015-05-20T10:56:22.695000 #21362]  INFO -- : Refreshing Gem list
-I, [2015-05-20T10:56:24.409412 #21362]  INFO -- : unlinking existing socket=/tmp/unicorn.cosme.sock
-I, [2015-05-20T10:56:24.409548 #21362]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
-I, [2015-05-20T10:56:25.419487 #21362]  INFO -- : master process ready
-I, [2015-05-20T10:56:25.426823 #21373]  INFO -- : worker=0 ready
-D, [2015-05-20T11:42:06.932307 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
-D, [2015-05-20T12:31:36.464704 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
-D, [2015-05-20T13:35:21.521296 #21362] DEBUG -- : waiting 16.0s after suspend/hibernation
-I, [2015-05-20T18:05:14.439079 #21362]  INFO -- : reaped #<Process::Status: pid 21373 exit 0> worker=0
-I, [2015-05-20T18:05:14.439405 #21362]  INFO -- : master complete
+I, [2015-05-22T07:33:34.826529 #11175]  INFO -- : reaped #<Process::Status: pid 11187 exit 0> worker=0
+I, [2015-05-22T07:33:34.826679 #11175]  INFO -- : master complete
+I, [2015-05-22T07:56:10.872720 #3800]  INFO -- : Refreshing Gem list
+I, [2015-05-22T07:56:12.960863 #3800]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-22T07:56:13.970365 #3800]  INFO -- : master process ready
+I, [2015-05-22T07:56:13.990742 #3812]  INFO -- : worker=0 ready
+I, [2015-05-22T07:57:08.843874 #3800]  INFO -- : reaped #<Process::Status: pid 3812 exit 0> worker=0
+I, [2015-05-22T07:57:08.844083 #3800]  INFO -- : master complete
+I, [2015-05-22T07:57:18.329762 #3834]  INFO -- : Refreshing Gem list
+I, [2015-05-22T07:57:20.031370 #3834]  INFO -- : unlinking existing socket=/tmp/unicorn.cosme.sock
+I, [2015-05-22T07:57:20.031499 #3834]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-22T07:57:21.041036 #3834]  INFO -- : master process ready
+I, [2015-05-22T07:57:21.049655 #3846]  INFO -- : worker=0 ready
+I, [2015-05-22T07:59:36.399582 #3834]  INFO -- : reaped #<Process::Status: pid 3846 exit 0> worker=0
+I, [2015-05-22T07:59:36.399729 #3834]  INFO -- : master complete
+I, [2015-05-22T07:59:45.659135 #3931]  INFO -- : Refreshing Gem list
+I, [2015-05-22T07:59:47.367770 #3931]  INFO -- : unlinking existing socket=/tmp/unicorn.cosme.sock
+I, [2015-05-22T07:59:47.367940 #3931]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-22T07:59:48.376206 #3931]  INFO -- : master process ready
+I, [2015-05-22T07:59:48.381925 #3947]  INFO -- : worker=0 ready
+D, [2015-05-22T09:56:15.352252 #3931] DEBUG -- : waiting 16.0s after suspend/hibernation
+I, [2015-05-22T16:46:02.636717 #3931]  INFO -- : reaped #<Process::Status: pid 3947 exit 0> worker=0
+I, [2015-05-22T16:46:02.636828 #3931]  INFO -- : master complete
+I, [2015-05-24T15:55:42.053492 #5379]  INFO -- : Refreshing Gem list
+I, [2015-05-24T15:55:52.114198 #5379]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-24T15:55:53.184637 #5379]  INFO -- : master process ready
+I, [2015-05-24T15:55:53.204386 #5419]  INFO -- : worker=0 ready
+D, [2015-05-24T23:24:16.305461 #5379] DEBUG -- : waiting 16.0s after suspend/hibernation
+D, [2015-05-25T00:11:46.576831 #5379] DEBUG -- : waiting 16.0s after suspend/hibernation
+I, [2015-05-25T01:17:17.532375 #5379]  INFO -- : reaped #<Process::Status: pid 5419 exit 0> worker=0
+I, [2015-05-25T01:17:17.532482 #5379]  INFO -- : master complete

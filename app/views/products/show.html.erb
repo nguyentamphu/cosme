@@ -102,7 +102,7 @@
                     <div class="qty-wr">
                       <div class="qty-text hidden-xs"><b>Qty: </b></div>
                       <div class="quantity-inp">
-                        <%= number_field_tag :qty, params[:qty], class:"quantity-input", min:"1", value: 1, min: 1 %>
+                        <%= number_field_tag :qty, params[:qty], class:"quantity-input", min:"1", value: 1 %>
                       </div>
                     </div>
                   </div>
@@ -190,29 +190,67 @@
           
           <div class="write-reivew" id="#write-review">
             <% if session[:id] != nil %>
-            <p style="color: red"><%= notice %></p>
+            
             <h3>Ratings</h3>
             <div class="fr-border"></div>
             <!-- Form -->
             <%= form_tag ratings_path, method: :post do %>
             <%= hidden_field_tag :product_id, @product.id  %>
             <%= hidden_field_tag :user_id, session[:id]  %>
+            <% if @rating %>
               <div class="row">
                 <div class="col-md-4 col-xs-12"> <a name="wr"> </a>
-                  <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" />
-                    <label for="star5" title="Rocks!" class="fa fa-star">5 stars</label>
-                    <input type="radio" id="star4" name="rating" value="4" />
-                    <label for="star4" title="Pretty good" class="fa fa-star">4 stars</label>
-                    <input type="radio" id="star3" name="rating" value="3" />
-                    <label for="star3" title="Cool" class="fa fa-star">3 stars</label>
-                    <input type="radio" id="star2" name="rating" value="2" />
-                    <label for="star2" title="Kinda bad" class="fa fa-star">2 stars</label>
-                    <input type="radio" id="star1" name="rating" value="1" />
-                    <label for="star1" title="Oops!" class="fa fa-star">1 star</label>
+                  <fieldset class="rating" style="border: 0px">
+                    <% if @rating.rating == 5 %>
+                      <input type="radio" id="star5" name="rating" value="5" disabled="true" checked="true" />
+                    <% end -%>
+                      <label for="star5" title="Rocks!" class="fa fa-star" >5 stars</label>
+                    <% if @rating.rating == 4 %>
+                      <input type="radio" id="star4" name="rating" value="4" disabled="true" checked="true"/>
+                    <% end -%>
+                      <label for="star4" title="Pretty good" class="fa fa-star">4 stars</label>
+                    <% if @rating.rating == 3 %>
+                      <input type="radio" id="star3" name="rating" value="3" disabled="true" checked="true"/>
+                    <% end -%>
+                      <label for="star3" title="Cool" class="fa fa-star">3 stars</label>
+                    <% if @rating.rating == 2 %>
+                      <input type="radio" id="star2" name="rating" value="2" disabled="true" checked="true"/>
+                    <% end -%>
+                      <label for="star2" title="Kinda bad" class="fa fa-star">2 stars</label>
+                    <% if @rating.rating == 1 %>
+                      <input type="radio" id="star1" name="rating" value="1" disabled="true" checked="true"/>
+                    <% end -%>
+                      <label for="star1" title="Oops!" class="fa fa-star">1 star</label>
                   </fieldset>
+                </div>
               </div>
-              <button class="btn normal color1 pull-right">Submit</button>
+                <p class="pull-left" style="font-family: cursive;font-size: xx-large;font-style: oblique;color: green">
+                  You rated this product :)
+                </p> 
+
+                <%= link_to 'Delete rating',  rating_path, :confirm => 'Are you sure?', :method => :delete
+                   %>
+
+                <button class="btn normal color1 pull-right" disabled="true">Submit</button>
+              <% else %>
+                <div class="row">
+                  <div class="col-md-4 col-xs-12"> <a name="wr"> </a>
+                    <fieldset class="rating" style="border: 0px">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label for="star5" title="Rocks!" class="fa fa-star">5 stars</label>
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label for="star4" title="Pretty good" class="fa fa-star">4 stars</label>
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label for="star3" title="Cool" class="fa fa-star">3 stars</label>
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label for="star2" title="Kinda bad" class="fa fa-star">2 stars</label>
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label for="star1" title="Oops!" class="fa fa-star">1 star</label>
+                    </fieldset>
+                  </div>
+                </div>
+              <button type="submit" class="btn normal color1 pull-right">Submit</button>
+              <% end -%>
             <% end%>  
             <%end%>
             <!-- end: Form --> 

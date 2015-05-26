@@ -1,0 +1,2 @@
+[RailsAdmin] Could not load model Comment, assuming model is non existing. (Unable to autoload constant Comment, expected /home/xv/cosme/app/models/comment.rb to define it)
+[RailsAdmin] Could not load model User, assuming model is non existing. (Unable to autoload constant User, expected /home/xv/cosme/app/models/user.rb to define it)

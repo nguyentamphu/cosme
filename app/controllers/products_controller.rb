@@ -19,6 +19,10 @@ class ProductsController < ApplicationController
      ifnull(DATEDIFF(Now(), products.created_at),0) as new, products.detail, products.created_at,
       IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
       product_images.image, avg(ratings.rating) as rating').find(params[:id])
+
+    @rating = Rating.find_by_account_id(session[:id])
+    # binding.pry
+    # return false
   end
 
   def new

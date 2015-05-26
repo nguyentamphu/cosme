@@ -41,6 +41,9 @@ class AccountsController < ApplicationController
           if @account.save
             @acc = Account.find_by(email: account_params[:email])
             SendMailer.user_email(@acc).deliver
+            session[:id] = @account[:id]
+            session[:email] = @account[:email]
+            session[:user]= @account[:full_name]
             format.html { redirect_to root_path }
             format.json { render :show, status: :created, location: @account }
           else  
