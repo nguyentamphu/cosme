@@ -35,3 +35,7 @@ D, [2015-05-24T23:24:16.305461 #5379] DEBUG -- : waiting 16.0s after suspend/hib
 D, [2015-05-25T00:11:46.576831 #5379] DEBUG -- : waiting 16.0s after suspend/hibernation
 I, [2015-05-25T01:17:17.532375 #5379]  INFO -- : reaped #<Process::Status: pid 5419 exit 0> worker=0
 I, [2015-05-25T01:17:17.532482 #5379]  INFO -- : master complete
+I, [2015-05-27T22:42:25.331821 #4636]  INFO -- : Refreshing Gem list
+I, [2015-05-27T22:42:35.697164 #4636]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-05-27T22:42:36.761994 #4636]  INFO -- : master process ready
+I, [2015-05-27T22:42:36.879964 #4684]  INFO -- : worker=0 ready

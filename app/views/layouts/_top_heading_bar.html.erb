@@ -1,4 +1,4 @@
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col-md-12">
         <div class="topheadrow">
@@ -14,14 +14,45 @@
 
             <li><%= link_to "<i class='fa fa-sign-in fa-fw'></i><span class='hidden-xs'>Sign up</span>".html_safe, new_account_path %></li>
             <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="index.htm#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
+            <% if flash[:msg] %>
+              <div class="loginbox dropdown-menu" style="display: block"> <span class="form-header">Login</span>
+            <% else %>
               <div class="loginbox dropdown-menu"> <span class="form-header">Login</span>
+            <% end -%>
+
                 <%= form_tag login_path do %>
                   <div class="form-group"> <i class="fa fa-user fa-fw"></i>
                     <%= text_field_tag :email, params[:email], class: 'form-control', placeholder:'Email' %>
                   </div>
-                  <div class="form-group"> <i class="fa fa-lock fa-fw"></i>
-                    <%= password_field_tag :password, params[:password], class: 'form-control', placeholder:'Password' %>
-                  </div>
+                  <div class="form-group" id='password'> <p id="bt"><i class="fa fa-lock fa-fw" ></i></p>
+                    <%= password_field_tag :password, params[:password], class: 'form-control', placeholder:'Password', id: "pass" %>
+                    <!-- <button id="bt"><i class="fa fa-eye fa-fw"></i></button> -->
+                  </div>  
+                  
+                  <script>
+                    
+                  $(document).ready(function() {
+                    $('#bt').hover(function() {
+                      // alert(2);
+                      // $(this).html('<i class="fa fa-unlock-alt fa-fw"></i>');
+                      $('#pass').attr('type', 'text');
+                      // $('#bt').html('');
+                    }, function(){
+                      // $('#bt').html('');
+                      // alert(2);
+                      // $(this).empty().append('<i class="fa fa-lock fa-fw"></i>');
+                      $('#pass').attr('type', 'password');
+
+                    });
+                  });
+                    
+                  </script>
+
+                  <% if notice %>
+                    <div class="pull-left">
+                      <label> <%= notice %> </label>
+                    </div>
+                  <% end -%>
                   <div>
                     <%= submit_tag 'Login', class: 'btn btn-success pull-right', style: "padding: 6px 12px; background-color: #2980B9" %>
                   </div>

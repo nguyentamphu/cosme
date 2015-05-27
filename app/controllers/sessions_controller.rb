@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       session[:user]= @account[:full_name]
       redirect_to products_path
     else
-      redirect_to products_path, alert: 'invalid username or password'
+      flash[:msg] = 'Login again!'
+      redirect_to products_path, notice: 'Invalid email or password!'
     end
   end
 
