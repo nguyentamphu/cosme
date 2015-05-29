@@ -51,6 +51,7 @@ gem "acts_as_readonlyable" # sharding slave databases
 gem 'syslogger' # logger
 gem 'email_verifier' #verify email
 # Use multiple upload
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
