@@ -10,10 +10,14 @@ module Cosmejapan
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.assets.initialize_on_precompile = true
+    config.assets.initialize_on_precompile = false
+    # config.assets.initialize_on_precompile = false
 
     config.assets.compile = true
     config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+
+    config.assets.precompile += %w(*.svg *.eot *.woff *.ttf *.gif *.png *.ico)
+    config.assets.precompile << /\A(?!active_admin).*\.(js|css)\z/ 
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

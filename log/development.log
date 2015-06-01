@@ -68689,3 +68689,2379 @@ Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2015-06
 
 
 Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 127.0.0.1 at 2015-06-01 22:07:33 +0700
+
+
+Started GET "/admin" for 192.168.1.110 at 2015-06-01 22:22:59 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 10ms
+
+
+Started GET "/admins/sign_in" for 192.168.1.110 at 2015-06-01 22:23:00 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 313ms (Views: 302.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:00 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:01 +0700
+
+
+Started GET "/assets/sd-admin.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:01 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:02 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:02 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:02 +0700
+
+
+Started GET "/" for 192.168.1.110 at 2015-06-01 22:23:06 +0700
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, products.id AS products_id FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  products.id, products.name, products.price, DATEDIFF(Now(), products.created_at) as new, 
+      IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
+      product_images.image, avg(ratings.rating) as rating FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id LIMIT 12 OFFSET 0[0m
+  Rendered products/_products.html.erb (26.3ms)
+  Rendered products/index.html.erb within layouts/public (27.5ms)
+  Rendered layouts/_top_heading_bar.html.erb (1.4ms)
+  Rendered layouts/_search_logo.html.erb (0.7ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.`id`, `categories`.`name` FROM `categories` WHERE ((parent_id <> 0 or parent_id <> "null" )
+      and (is_delete = 0 or is_delete = "null"))
+  [1m[36mSlider Load (0.1ms)[0m  [1mSELECT `sliders`.* FROM `sliders`[0m
+  Rendered layouts/_menu.html.erb (10.7ms)
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`is_delete` = 0
+  [1m[36mAdv Load (0.1ms)[0m  [1mSELECT `advs`.* FROM `advs`[0m
+  Rendered layouts/_widgets.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 258ms (Views: 246.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:08 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/sd-admin.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:09 +0700
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:23:10 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.8ms)
+
+
+Started GET "/slide1.jpg" for 192.168.1.110 at 2015-06-01 22:23:10 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.6ms)
+
+
+Started GET "/slide2.jpg" for 192.168.1.110 at 2015-06-01 22:23:10 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide2.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:23:11 +0700
+
+
+Started POST "/admins/sign_in" for 192.168.1.110 at 2015-06-01 22:24:11 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kS/aHf4Tf4/tGKBsSIJKM2bSefO0duo9xZi2A/+GCxgnWg7E+WiaAp3JTGe9liy2K4dk3poWEsGbXRdkHyjVGA==", "admin"=>{"email"=>"tamphubkdn@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'tamphubkdn@gmail.com'  ORDER BY `admins`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `admins` SET `current_sign_in_at` = '2015-06-01 15:24:11.727881', `current_sign_in_ip` = '192.168.1.110', `sign_in_count` = 2, `updated_at` = '2015-06-01 15:24:11.728965' WHERE `admins`.`id` = 1
+  [1m[36m (141.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.104:3000/admin/
+Completed 302 Found in 226ms (ActiveRecord: 142.4ms)
+
+
+Started GET "/admin/" for 192.168.1.110 at 2015-06-01 22:24:11 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:125)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:167)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:182)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:194)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:194)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:194)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:194)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:194)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:205)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:205)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:205)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:205)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:205)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:216)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:272)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:283)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:294)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:305)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:317)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:237)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:237)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:237)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:237)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:237)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:109)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:85)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:85)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:85)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:85)
+DEPRECATION WARNING: `serialized_attributes` is deprecated without replacement, and will be removed in Rails 5.0. (called from block (3 levels) in <top (required)> at /home/phunt/cosme/config/initializers/rails_admin.rb:85)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `accounts`[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  `accounts`.* FROM `accounts`  ORDER BY accounts.updated_at desc LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `admins`[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  `admins`.* FROM `admins`  ORDER BY admins.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `advs`[0m
+  [1m[35mAdv Load (0.1ms)[0m  SELECT  `advs`.* FROM `advs`  ORDER BY advs.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `banners`[0m
+  [1m[35mBanner Load (0.1ms)[0m  SELECT  `banners`.* FROM `banners`  ORDER BY banners.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `brands`[0m
+  [1m[35mBrand Load (0.1ms)[0m  SELECT  `brands`.* FROM `brands`  ORDER BY brands.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  `categories`.* FROM `categories`  ORDER BY categories.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `contacts`[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT  `contacts`.* FROM `contacts`  ORDER BY contacts.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `orders`[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  `orders`.* FROM `orders`  ORDER BY orders.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `orders_details`[0m
+  [1m[35mOrdersDetail Load (0.1ms)[0m  SELECT  `orders_details`.* FROM `orders_details`  ORDER BY orders_details.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY posts.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY products.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `product_images`[0m
+  [1m[35mProductImage Load (0.1ms)[0m  SELECT  `product_images`.* FROM `product_images`  ORDER BY product_images.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `ratings`[0m
+  [1m[35mRating Load (0.1ms)[0m  SELECT  `ratings`.* FROM `ratings`  ORDER BY ratings.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `sliders`[0m
+  [1m[35mSlider Load (0.1ms)[0m  SELECT  `sliders`.* FROM `sliders`  ORDER BY sliders.updated_at desc LIMIT 1
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (27.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (11.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (13.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (2.8ms)
+Completed 200 OK in 645ms (Views: 391.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:12 +0700
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:13 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:24:13 +0700
+
+
+Started GET "/admin/adv?_pjax=%5Bdata-pjax-container%5D" for 192.168.1.110 at 2015-06-01 22:24:18 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adv"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35mAdv Load (0.2ms)[0m  SELECT `advs`.* FROM `advs` WHERE (isnull(is_delete) or is_delete = 0)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (14.8ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/adv/new?_pjax=%5Bdata-pjax-container%5D" for 192.168.1.110 at 2015-06-01 22:24:20 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"adv"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/_form_field.html.haml (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/_form_file_upload.html.haml (3.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/_submit_buttons.html.haml (3.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (18.6ms)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:24:23 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.7ms)
+
+
+Started GET "/slide1.jpg" for 192.168.1.110 at 2015-06-01 22:24:23 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.0ms)
+
+
+Started GET "/slide1.jpg" for 192.168.1.110 at 2015-06-01 22:24:25 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.9ms)
+
+
+Started POST "/admin/adv/new" for 192.168.1.110 at 2015-06-01 22:24:44 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kR1PtT5CzAHEg36gkQdEZez0WUNpIE0Pm4bMgE1YwAu61WVM5xkOo4QgYdgXacOK3h1x9W3UasVzbONQ3Jo+A==", "adv"=>{"title"=>"dsfsd", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000050195f0 @tempfile=#<Tempfile:/tmp/RackMultipart20150601-8352-127zilw.jpg>, @original_filename="Jellyfish.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"adv[image]\"; filename=\"Jellyfish.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>"", "link"=>"fb.com"}, "return_to"=>"http://192.168.1.104:3000/admin/adv", "_save"=>"", "model_name"=>"adv"}
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `advs` (`title`, `image`, `link`, `created_at`, `updated_at`) VALUES ('dsfsd', 'Jellyfish.jpg', 'fb.com', '2015-06-01 15:24:45.061812', '2015-06-01 15:24:45.061812')
+  [1m[36m (42.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://192.168.1.104:3000/admin/adv
+Completed 302 Found in 267ms (ActiveRecord: 43.2ms)
+
+
+Started GET "/admin/adv" for 192.168.1.110 at 2015-06-01 22:24:45 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"adv"}
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+  [1m[36mAdv Load (0.3ms)[0m  [1mSELECT `advs`.* FROM `advs` WHERE (isnull(is_delete) or is_delete = 0)[0m
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (40.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (8.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (2.4ms)
+Completed 200 OK in 235ms (Views: 229.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:24:46 +0700
+
+
+Started GET "/" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) AS count_all, products.id AS products_id FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  products.id, products.name, products.price, DATEDIFF(Now(), products.created_at) as new, 
+      IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
+      product_images.image, avg(ratings.rating) as rating FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id LIMIT 12 OFFSET 0[0m
+  Rendered products/_products.html.erb (6.4ms)
+  Rendered products/index.html.erb within layouts/public (7.0ms)
+  Rendered layouts/_top_heading_bar.html.erb (0.5ms)
+  Rendered layouts/_search_logo.html.erb (0.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.`id`, `categories`.`name` FROM `categories` WHERE ((parent_id <> 0 or parent_id <> "null" )
+      and (is_delete = 0 or is_delete = "null"))
+  [1m[36mSlider Load (0.1ms)[0m  [1mSELECT `sliders`.* FROM `sliders`[0m
+  Rendered layouts/_menu.html.erb (4.0ms)
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`is_delete` = 0
+  [1m[36mAdv Load (0.1ms)[0m  [1mSELECT `advs`.* FROM `advs`[0m
+  Rendered layouts/_widgets.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 201ms (Views: 198.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.110 at 2015-06-01 22:24:48 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+
+Started GET "/slide2.jpg" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide2.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/slide1.jpg" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:49 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:50 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:50 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:50 +0700
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:24:50 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.2ms)
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:51 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:51 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:51 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:51 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:24:51 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:24:52 +0700
+
+
+Started GET "/fb.com" for 192.168.1.110 at 2015-06-01 22:24:56 +0700
+
+ActionController::RoutingError (No route matches [GET] "/fb.com"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/slide0.jpg" for 192.168.1.110 at 2015-06-01 22:25:00 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:00 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:00 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:25:01 +0700
+
+
+Started GET "/products/2" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  products.id, products.name, products.price, products.serial, products.height,
+       brands.name as brand_name, categories.name as category_name,
+     ifnull(DATEDIFF(Now(), products.created_at),0) as new, products.detail, products.created_at,
+      IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
+      product_images.image, avg(ratings.rating) as rating FROM `products` left JOIN ratings ON ratings.product_id = products.id
+      left JOIN product_images ON product_images.product_id = products.id
+      left JOIN brands ON brands.id = products.brand_id
+      left JOIN categories ON categories.id = products.category_id WHERE `products`.`id` = 2 LIMIT 1
+  [1m[36mRating Load (0.5ms)[0m  [1mSELECT  `ratings`.* FROM `ratings` WHERE `ratings`.`account_id` IS NULL LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/product (6.8ms)
+  Rendered layouts/_top_heading_bar.html.erb (0.4ms)
+  Rendered layouts/_search_logo.html.erb (0.2ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.`id`, `categories`.`name` FROM `categories` WHERE ((parent_id <> 0 or parent_id <> "null" )
+      and (is_delete = 0 or is_delete = "null"))
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles`[0m
+  [1m[35mAdv Load (0.1ms)[0m  SELECT `advs`.* FROM `advs`
+  Rendered layouts/_widgets.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 313ms (Views: 301.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.110 at 2015-06-01 22:25:08 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:09 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:25:09 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:09 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:09 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:09 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.110 at 2015-06-01 22:25:10 +0700
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for 192.168.1.110 at 2015-06-01 22:25:11 +0700
+
+
+Started GET "/admin" for 192.168.1.103 at 2015-06-01 22:26:49 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/admins/sign_in" for 192.168.1.103 at 2015-06-01 22:26:49 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 164ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/sd-admin.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:50 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:51 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:51 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:51 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:51 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:51 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:52 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.103 at 2015-06-01 22:26:53 +0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:57 +0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 192.168.1.103 at 2015-06-01 22:26:58 +0700
+
+
+Started GET "/assets/sd-admin.css?body=1" for 192.168.1.103 at 2015-06-01 22:27:00 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.103 at 2015-06-01 22:27:00 +0700
+
+
+Started POST "/admins/sign_in" for 192.168.1.103 at 2015-06-01 22:27:38 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sC+fwly63e9OJ78BT1ZLbJMBfxq2yGmHuOUtb5smjoQraoKD4S0lF6hN7foWRXud9d2dlRFARQRTIFEZFLgzQ==", "admin"=>{"email"=>"tamphubkdn@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'tamphubkdn@gmail.com'  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `admins` SET `last_sign_in_at` = '2015-06-01 15:24:11.000000', `current_sign_in_at` = '2015-06-01 15:27:38.818421', `last_sign_in_ip` = '192.168.1.110', `current_sign_in_ip` = '192.168.1.103', `sign_in_count` = 3, `updated_at` = '2015-06-01 15:27:38.819415' WHERE `admins`.`id` = 1[0m
+  [1m[35m (32.4ms)[0m  COMMIT
+Redirected to http://192.168.1.104:3000/admin/
+Completed 302 Found in 116ms (ActiveRecord: 33.1ms)
+
+
+Started GET "/admin/" for 192.168.1.103 at 2015-06-01 22:27:38 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `accounts`
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  `accounts`.* FROM `accounts`  ORDER BY accounts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `admins`
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT  `admins`.* FROM `admins`  ORDER BY admins.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `advs`
+  [1m[36mAdv Load (0.2ms)[0m  [1mSELECT  `advs`.* FROM `advs`  ORDER BY advs.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `banners`
+  [1m[36mBanner Load (0.1ms)[0m  [1mSELECT  `banners`.* FROM `banners`  ORDER BY banners.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `brands`
+  [1m[36mBrand Load (0.1ms)[0m  [1mSELECT  `brands`.* FROM `brands`  ORDER BY brands.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  `categories`.* FROM `categories`  ORDER BY categories.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `contacts`
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  `contacts`.* FROM `contacts`  ORDER BY contacts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `orders`
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  `orders`.* FROM `orders`  ORDER BY orders.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `orders_details`
+  [1m[36mOrdersDetail Load (0.1ms)[0m  [1mSELECT  `orders_details`.* FROM `orders_details`  ORDER BY orders_details.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY posts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `products`
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY products.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `product_images`
+  [1m[36mProductImage Load (0.1ms)[0m  [1mSELECT  `product_images`.* FROM `product_images`  ORDER BY product_images.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `ratings`
+  [1m[36mRating Load (0.1ms)[0m  [1mSELECT  `ratings`.* FROM `ratings`  ORDER BY ratings.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `sliders`
+  [1m[36mSlider Load (0.0ms)[0m  [1mSELECT  `sliders`.* FROM `sliders`  ORDER BY sliders.updated_at desc LIMIT 1[0m
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (23.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (8.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (0.9ms)
+Completed 200 OK in 220ms (Views: 202.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 192.168.1.103 at 2015-06-01 22:27:39 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:39 +0700
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:39 +0700
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:39 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:39 +0700
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:42 +0700
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:42 +0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:42 +0700
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:42 +0700
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:42 +0700
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:43 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 192.168.1.103 at 2015-06-01 22:27:44 +0700
+
+
+Started GET "/admin/" for 192.168.1.103 at 2015-06-01 22:28:30 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `accounts`[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  `accounts`.* FROM `accounts`  ORDER BY accounts.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `admins`[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  `admins`.* FROM `admins`  ORDER BY admins.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `advs`[0m
+  [1m[35mAdv Load (0.1ms)[0m  SELECT  `advs`.* FROM `advs`  ORDER BY advs.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `banners`[0m
+  [1m[35mBanner Load (0.1ms)[0m  SELECT  `banners`.* FROM `banners`  ORDER BY banners.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `brands`[0m
+  [1m[35mBrand Load (0.1ms)[0m  SELECT  `brands`.* FROM `brands`  ORDER BY brands.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `categories`[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  `categories`.* FROM `categories`  ORDER BY categories.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `contacts`[0m
+  [1m[35mContact Load (0.1ms)[0m  SELECT  `contacts`.* FROM `contacts`  ORDER BY contacts.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `orders`[0m
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  `orders`.* FROM `orders`  ORDER BY orders.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `orders_details`[0m
+  [1m[35mOrdersDetail Load (0.1ms)[0m  SELECT  `orders_details`.* FROM `orders_details`  ORDER BY orders_details.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY posts.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  `products`.* FROM `products`  ORDER BY products.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `product_images`[0m
+  [1m[35mProductImage Load (0.1ms)[0m  SELECT  `product_images`.* FROM `product_images`  ORDER BY product_images.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `ratings`[0m
+  [1m[35mRating Load (0.1ms)[0m  SELECT  `ratings`.* FROM `ratings`  ORDER BY ratings.updated_at desc LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `sliders`[0m
+  [1m[35mSlider Load (0.1ms)[0m  SELECT  `sliders`.* FROM `sliders`  ORDER BY sliders.updated_at desc LIMIT 1
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (28.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (8.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (0.9ms)
+Completed 200 OK in 230ms (Views: 200.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 192.168.1.103 at 2015-06-01 22:28:31 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.103 at 2015-06-01 22:28:31 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.103 at 2015-06-01 22:28:31 +0700
+
+
+Started GET "/assets/fontawesome-webfont.svg?v=4.3.0" for 192.168.1.103 at 2015-06-01 22:28:35 +0700
+
+
+Started GET "/" for 192.168.1.103 at 2015-06-01 22:29:01 +0700
+Processing by ProductsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) AS count_all, products.id AS products_id FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  products.id, products.name, products.price, DATEDIFF(Now(), products.created_at) as new, 
+      IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
+      product_images.image, avg(ratings.rating) as rating FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id LIMIT 12 OFFSET 0
+  Rendered products/_products.html.erb (13.3ms)
+  Rendered products/index.html.erb within layouts/public (14.4ms)
+  Rendered layouts/_top_heading_bar.html.erb (0.4ms)
+  Rendered layouts/_search_logo.html.erb (0.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.`id`, `categories`.`name` FROM `categories` WHERE ((parent_id <> 0 or parent_id <> "null" )
+      and (is_delete = 0 or is_delete = "null"))[0m
+  [1m[35mSlider Load (0.1ms)[0m  SELECT `sliders`.* FROM `sliders`
+  Rendered layouts/_menu.html.erb (3.8ms)
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`is_delete` = 0[0m
+  [1m[35mAdv Load (0.1ms)[0m  SELECT `advs`.* FROM `advs`
+  Rendered layouts/_widgets.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 249ms (Views: 244.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:03 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.103 at 2015-06-01 22:29:07 +0700
+
+
+Started GET "/slide1.jpg" for 192.168.1.103 at 2015-06-01 22:29:37 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/slide2.jpg" for 192.168.1.103 at 2015-06-01 22:29:37 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide2.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/slide0.jpg" for 192.168.1.103 at 2015-06-01 22:29:37 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.2ms)
+
+
+Started GET "/assets/fontawesome-webfont.svg?v=4.3.0" for 192.168.1.103 at 2015-06-01 22:29:39 +0700
+
+
+Started GET "/admin/" for 192.168.1.103 at 2015-06-01 22:31:05 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `accounts`
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT  `accounts`.* FROM `accounts`  ORDER BY accounts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `admins`
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT  `admins`.* FROM `admins`  ORDER BY admins.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `advs`
+  [1m[36mAdv Load (0.1ms)[0m  [1mSELECT  `advs`.* FROM `advs`  ORDER BY advs.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `banners`
+  [1m[36mBanner Load (0.1ms)[0m  [1mSELECT  `banners`.* FROM `banners`  ORDER BY banners.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `brands`
+  [1m[36mBrand Load (0.1ms)[0m  [1mSELECT  `brands`.* FROM `brands`  ORDER BY brands.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `categories`
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  `categories`.* FROM `categories`  ORDER BY categories.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `contacts`
+  [1m[36mContact Load (0.1ms)[0m  [1mSELECT  `contacts`.* FROM `contacts`  ORDER BY contacts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `orders`
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  `orders`.* FROM `orders`  ORDER BY orders.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `orders_details`
+  [1m[36mOrdersDetail Load (0.1ms)[0m  [1mSELECT  `orders_details`.* FROM `orders_details`  ORDER BY orders_details.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY posts.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `products`
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products`  ORDER BY products.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `product_images`
+  [1m[36mProductImage Load (0.1ms)[0m  [1mSELECT  `product_images`.* FROM `product_images`  ORDER BY product_images.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `ratings`
+  [1m[36mRating Load (0.1ms)[0m  [1mSELECT  `ratings`.* FROM `ratings`  ORDER BY ratings.updated_at desc LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `sliders`
+  [1m[36mSlider Load (0.1ms)[0m  [1mSELECT  `sliders`.* FROM `sliders`  ORDER BY sliders.updated_at desc LIMIT 1[0m
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (21.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.8ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/_navigation.html.haml (8.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/rails_admin-0.6.6/app/views/layouts/rails_admin/pjax.html.haml (0.9ms)
+Completed 200 OK in 204ms (Views: 177.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery-ui/effect.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery-ui/widget.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:09 +0700
+
+
+Started GET "/assets/jquery-ui/sortable.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/jquery-ui/mouse.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/jquery-ui/autocomplete.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/jquery-ui/position.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/jquery-ui/menu.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:10 +0700
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:11 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:12 +0700
+
+
+Started GET "/" for 192.168.1.103 at 2015-06-01 22:31:18 +0700
+Processing by ProductsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) AS count_all, products.id AS products_id FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  products.id, products.name, products.price, DATEDIFF(Now(), products.created_at) as new, 
+      IFNULL(products.sale_off,0) as sale, product_images.id as image_id,
+      product_images.image, avg(ratings.rating) as rating FROM `products` left JOIN ratings ON ratings.product_id = products.id 
+      left JOIN product_images ON product_images.product_id = products.id WHERE (products.is_delete =0) GROUP BY products.id LIMIT 12 OFFSET 0[0m
+  Rendered products/_products.html.erb (5.0ms)
+  Rendered products/index.html.erb within layouts/public (5.5ms)
+  Rendered layouts/_top_heading_bar.html.erb (0.5ms)
+  Rendered layouts/_search_logo.html.erb (0.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.`id`, `categories`.`name` FROM `categories` WHERE ((parent_id <> 0 or parent_id <> "null" )
+      and (is_delete = 0 or is_delete = "null"))
+  [1m[36mSlider Load (0.1ms)[0m  [1mSELECT `sliders`.* FROM `sliders`[0m
+  Rendered layouts/_menu.html.erb (4.7ms)
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`is_delete` = 0
+  [1m[36mAdv Load (0.1ms)[0m  [1mSELECT `advs`.* FROM `advs`[0m
+  Rendered layouts/_widgets.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 219ms (Views: 216.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/fontawesome-webfont.svg?v=4.3.0" for 192.168.1.103 at 2015-06-01 22:31:18 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:20 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:20 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:20 +0700
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:20 +0700
+
+
+Started GET "/assets/menu3d.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:21 +0700
+
+
+Started GET "/assets/normalize.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:21 +0700
+
+
+Started GET "/assets/animate.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:21 +0700
+
+
+Started GET "/assets/style-switch.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/color.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/font-awesome.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/sb-admin-2.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/select2.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/metisMenu.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/ckeditor/init.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/ckeditor/ckeditor.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:22 +0700
+
+
+Started GET "/assets/bootstrap-select.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:23 +0700
+
+
+Started GET "/assets/iview.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:23 +0700
+
+
+Started GET "/assets/jquery.easing.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:23 +0700
+
+
+Started GET "/assets/menu3d.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:23 +0700
+
+
+Started GET "/assets/raphael-min.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:24 +0700
+
+
+Started GET "/assets/retina-1.1.0.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:26 +0700
+
+
+Started GET "/assets/style-switch.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/respond.min.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/html5shiv.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/jquery.elevatezoom.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/gmap3.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/selectivizr.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:27 +0700
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:28 +0700
+
+
+Started GET "/assets/scripts.js?body=1" for 192.168.1.103 at 2015-06-01 22:31:28 +0700
+
+
+Started GET "/assets/select2.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:30 +0700
+
+
+Started GET "/assets/fontawesome-webfont.svg?v=4.3.0" for 192.168.1.103 at 2015-06-01 22:31:33 +0700
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:34 +0700
+
+
+Started GET "/slide0.jpg" for 192.168.1.103 at 2015-06-01 22:31:39 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.1ms)
+
+
+Started GET "/slide2.jpg" for 192.168.1.103 at 2015-06-01 22:31:39 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide2.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/slide1.jpg" for 192.168.1.103 at 2015-06-01 22:31:39 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide1.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:42 +0700
+
+
+Started GET "/slide0.jpg" for 192.168.1.103 at 2015-06-01 22:31:42 +0700
+
+ActionController::RoutingError (No route matches [GET] "/slide0.jpg"):
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/ruby/2.2.0/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/ruby/2.2.0/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/phunt/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/assets/iview.css?body=1" for 192.168.1.103 at 2015-06-01 22:31:49 +0700
