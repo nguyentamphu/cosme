@@ -52,7 +52,7 @@ RailsAdmin.config do |config|
             else
               handle_save_error
             end
-          end       
+          end
         end
       end
     end
@@ -67,16 +67,16 @@ RailsAdmin.config do |config|
 
   #nguyentamphu
   # Slider
-  config.model Admin do
-    edit do
-      include_all_fields
-      exclude_fields :is_delete
-    end
-    list do
-      include_all_fields
-       exclude_fields :is_delete, :created_at, :updated_at
-    end
-  end
+  # config.model Admin do
+  #   edit do
+  #     include_all_fields
+  #     exclude_fields :is_delete
+  #   end
+  #   list do
+  #     include_all_fields
+  #      exclude_fields :is_delete, :created_at, :updated_at
+  #   end
+  # end
 
   config.model Slider do
       
@@ -321,12 +321,6 @@ config.model Product do
     list do
       include_all_fields
        exclude_fields :is_delete, :created_at, :updated_at
-    end
-  end
-  config.model Admin do
-    create do
-      include_all_fields
-      exclude_fields :is_delete
     end
   end
 end

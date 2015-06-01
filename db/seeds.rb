@@ -8,9 +8,9 @@
 require 'csv'
 require 'active_record/fixtures'
 
-Flextures::Config.fixture_load_directory = "db/seeds/"
+# Flextures::Config.fixture_load_directory = "db/seeds/"
 
-# seed database
+# # seed database
 def load_table(filename, klass)
   klass.delete_all
   fn = "#{Rails.root}/db/seeds/#{filename}.csv"
@@ -35,8 +35,11 @@ end
   product_images: ProductImage,
   brands: Brand,
   # admins: Admin,
-  accounts: Account,
+  # accounts: Account,
 }.each do |filename,klass|
   puts "#{filename} reading..."
   load_table(filename,klass)
 end
+
+require File.dirname(__FILE__) + '/seeds/account'
+require File.dirname(__FILE__) + '/seeds/admin'
