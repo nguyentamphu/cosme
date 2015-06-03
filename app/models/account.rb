@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-	validates_email_realness_of :email
+	# validates_email_realness_of :email
 	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 	validates :password , presence: true, length: { minimum: 6 }
 	validates :full_name , presence: true, length: { minimum: 1 }

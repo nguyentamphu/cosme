@@ -45,9 +45,15 @@
             <div class="col-md-4 twitter-block hidden-sm hidden-xs ">
                 <div class="box-heading"><span>ADVS</span></div>
                 <div class="row clearfix f-space10"></div>
+
               <%@advs.each do |adv|%>
-                <%= link_to "<img alt='product info' src='#{adv.image}'>".html_safe, adv.link %>
+                <% link = adv.link.gsub(/http:\/\//, '')
+                 %>
+                <%= link_to "<img alt='product info' src='#{adv.image}'>".html_safe, "http://#{link}", target: "_blank" %>
+
               <%end%>
+              <%= link_to "Visit Other Site", "http://www.rubyonrails.org/", data: { confirm: "Are you sure?" }
+              %>
 <!--
               <%@advs.each do |adv|%>
                <%= image_tag (adv.image) %>

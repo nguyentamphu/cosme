@@ -4,7 +4,7 @@
 #working_directory "#{@app_path}/"
 
 #app2 
-root = "/home/xv/cosme"
+root = "/home/phunt/cosme"
 working_directory root
 pid "#{root}/tmp/pids/unicorn-cosme.pid"
 listen "/tmp/unicorn.cosme.sock"

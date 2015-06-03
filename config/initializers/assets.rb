@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( bootstrap.css )
+# Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( sd-admin.css )
 Rails.application.config.assets.precompile += %w( font-awesome.css)
 Rails.application.config.assets.precompile += %w( fontawesome-webfont.eot )
@@ -11,8 +11,9 @@ Rails.application.config.assets.precompile += %w( fontawesome-webfont.woff )
 Rails.application.config.assets.precompile += %w( fontawesome-webfont.ttf )
 Rails.application.config.assets.precompile += %w( fontawesome-webfont.svg )
 
-# Rails.application.config.assets.precompile += ['rails_admin/**/*', 'fontawesome-webfont.*']
+Rails.application.config.assets.precompile += ['rails_admin/**/*', 'fontawesome-webfont.*']
 Rails.application.config.assets.precompile += %w( ckeditor/filebrowser/images/* )
+# Rails.application.config.assets.precompile += %w( bootstrap/* )
 # Rails.application.config.assets.precompile += %w( rails_admin/aristo/images/bg_fallback.png )
 
 Rails.application.config.assets.precompile += %w( custom.css)

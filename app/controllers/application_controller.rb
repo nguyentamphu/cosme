@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       and (is_delete = 0 or is_delete = "null")')
   end
   def set_image
-    @advs     = Adv.all
+    @advs     = Deal.all.where(is_delete: 0)
     @slide    = Slider.all
     @articles = Article.all
   end

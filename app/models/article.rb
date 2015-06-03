@@ -1,5 +1,5 @@
-require 'RMagick'
 class Article < ActiveRecord::Base
+  
 	before_save :default_values
 	mount_uploader :image, ImageUploader
 

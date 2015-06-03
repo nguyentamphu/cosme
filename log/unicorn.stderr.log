@@ -39,3 +39,8 @@ I, [2015-05-27T22:42:25.331821 #4636]  INFO -- : Refreshing Gem list
 I, [2015-05-27T22:42:35.697164 #4636]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
 I, [2015-05-27T22:42:36.761994 #4636]  INFO -- : master process ready
 I, [2015-05-27T22:42:36.879964 #4684]  INFO -- : worker=0 ready
+I, [2015-06-04T00:43:17.984557 #11990]  INFO -- : Refreshing Gem list
+[DEPRECATION] requiring "RMagick" is deprecated. Use "rmagick" instead
+I, [2015-06-04T00:43:19.742998 #11990]  INFO -- : listening on addr=/tmp/unicorn.cosme.sock fd=11
+I, [2015-06-04T00:43:20.751981 #11990]  INFO -- : master process ready
+I, [2015-06-04T00:43:20.862075 #12001]  INFO -- : worker=0 ready

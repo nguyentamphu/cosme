@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601133947) do
+ActiveRecord::Schema.define(version: 20150603164208) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",      limit: 255
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 20150601133947) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "advertises", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "image",      limit: 255
+    t.string   "link",       limit: 255
+    t.boolean  "is_delete",  limit: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "advs", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -116,6 +125,15 @@ ActiveRecord::Schema.define(version: 20150601133947) do
     t.boolean  "is_delete",     limit: 1
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "deals", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "image",      limit: 255
+    t.string   "link",       limit: 255
+    t.boolean  "is_delete",  limit: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "images", force: :cascade do |t|

@@ -29,7 +29,7 @@ Rails.application.configure do
 
 
   config.assets.compile = true
-  config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+  config.assets.precompile =  ['*.js', '*.scss', '*.css', '*.css.erb']
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.

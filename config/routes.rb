@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
-  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'products#index'
 
   resources :products do
@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   end
 
   resources :ratings
-  resources :advs
+  # resources :advs
 
   # resources :examples
   # The priority is based upon order of creation: first created -> highest priority.
