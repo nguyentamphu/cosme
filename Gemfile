@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0'
 gem 'devise'
-gem 'rails_admin'
+# gem 'rails_admin'
 gem 'ckeditor' # for WYSIWYG editing
 gem 'paperclip' # and installed imagemagick, for image attachments
 gem "omniauth", "1.1.0"
@@ -59,7 +59,7 @@ gem 'email_verifier' #verify email
 gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+#gem 'bootstrap-sass'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 gem 'byebug'
@@ -68,7 +68,6 @@ gem "pry-rails"
   # # Access an IRB console on exception pages or by using <%= console %> in views
   # gem 'web-console', '~> 2.0'
   # gem 'carrierwave' 
-  # gem 'rmagick', '2.13.2'
 
   # # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
@@ -76,7 +75,6 @@ gem "pry-rails"
 end
 
 # User famework bootstrap
-gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'autoprefixer-rails'
 
 #Pagination

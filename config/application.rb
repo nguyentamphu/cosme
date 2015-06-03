@@ -15,9 +15,10 @@ module Cosmejapan
 
     config.assets.compile = true
     config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+    config.assets.precompile += %w(*.js *.css *.svg *.eot *.woff *.ttf *.gif *.png *.ico)
 
-    config.assets.precompile += %w(*.svg *.eot *.woff *.ttf *.gif *.png *.ico)
-    config.assets.precompile << /\A(?!active_admin).*\.(js|css)\z/ 
+    # config.assets.precompile += %w(*.svg *.eot *.woff *.ttf *.gif *.png *.ico)
+    # config.assets.precompile << /\A(?!active_admin).*\.(js|css)\z/ 
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

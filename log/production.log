@@ -683,3 +683,6 @@ I, [2015-05-24T15:56:38.635575 #5419]  INFO -- : Started GET "/assets/font-aweso
 I, [2015-05-24T15:56:58.673065 #5419]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-24 15:56:58 +0700
 I, [2015-05-24T15:56:58.931188 #5419]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-24 15:56:58 +0700
 I, [2015-05-24T15:57:00.131105 #5419]  INFO -- : Started GET "/assets/fontawesome-webfont-29e4490a7a97ee3d12fea037d540ad91.woff2?v=4.3.0" for 127.0.0.1 at 2015-05-24 15:57:00 +0700
+W, [2015-06-01T23:59:08.144077 #13651]  WARN -- : WARNING on line 21 of /home/phunt/cosme/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
